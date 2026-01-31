@@ -1,0 +1,1334 @@
+{ 
+	////////////////////////////////////////////////////////////////
+	// SAVE THIS FILE AS CUSTOM IN THE RACE COORDINATOR LANGUAGES FOLDER
+	"GID_RBasicIntro": "Bienvenido a la guia de configuracion basica de la carrera. Esta guia te ayudara a la configuracion de una carrera utilizando solo las opciones de carrera mas comunes. Todo lo demas lo configuraras tu mismo. Esta guia es util para los usuarios que solo quieren competir, pero no estan satisfechos con las configuraciones de carreras predeterminadas que proporciona Race Coordinator.
+
+Algunas opciones de configuracion tendran un boton INFO ubicado en la parte inferior de la ventana. Utiliza este boton para obtener mas informacion sobre la opcion de configuracion.",
+	
+	"GID_RIntermediateIntro": "Bienvenido al asistente intermedio para crear una carrera. Este asistente te guiara para crear una carrera con los principales recursos disponibles a traves del RMS (Race Coordinator). Sin embargo, se ignoraran muchas opciones mas complejas que la mayoria de los usuarios no necesitan configurar. Este asistente se recomienda a los usuarios para crear carreras con formatos mas complejos.
+
+Algunas opciones de configuracion tendran un boton INFO ubicado en la parte inferior de la ventana. Utiliza este boton para obtener mas informacion sobre la opcion de configuracion.",
+
+	"GID_RExpertIntro": "Bienvenido a la configuracion de carrera guiada para expertos. Esta configuracion avanzada te guiara a traves de todas las opciones posibles de configuracion para una carrera. Esta guia es util para los usuarios que necesitan un control absoluto sobre su configuracion.
+
+Algunas opciones de configuracion tendran un boton INFO ubicado en la parte inferior de la ventana. Utiliza este boton para obtener mas informacion sobre la opcion de configuracion.",
+
+	"GID_BasicMoreWinTitle": "Informacion sobre Race Coordinator",
+	"GID_BasicMoreHeader": "Definiciones",
+	"GID_BasicMore": "Manga o serie (Heat): Un grupo de pilotos que corren alrededor de la pista durante un periodo de tiempo determinado o un numero maximo de vueltas. La manga se graba independientemente de todas las demas series. Hay varias configuraciones que controlan cuanto dura una manga y como puntua.
+
+Carrera: Un conjunto de mangas o series. Las puntuaciones obtenidas en cada manga se suman para calcular la clasificacion final de cada piloto. Hay muchos parametros que controlan como sumar las puntuaciones de manga.
+
+Evento, torneo o campeonato: Una serie de carreras. La primera carrera obtiene los datos del piloto a partir del orden en que se agregan en la pantalla de configuracion del dia de la carrera. Cada carrera posterior obtiene a sus pilotos y sus cabezas de serie de la clasificacion final de carreras anteriores. Se puede agregar cualquier numero de carreras a un evento que permita cualquier combinacion de entrenamiento, clasificacion, semifinales y carreras finales. Algunos o todos los pilotos pueden posponerse de una carrera a otra para que la cantidad de pilotos pueda reducirse lentamente si se desea.",
+
+	"GID_MinLapTimeMoreWinTitle": "Informacion sobre el tiempo minimo.",
+	"GID_MinLapTimeMoreHeader": "Tiempo minimo de vuelta",
+	"GID_MinLapTimeMore": "La opcion de tiempo minimo de vuelta es una medida de seguridad que evita que un sensor se dispare demasiado rapido. Esta opcion protege contra coches que chocan en la linea de salida/meta, coches que se mueven mal, coches que saltan a diferentes carriles, sombras u otras lecturas falsas, etc. Los valores correctos para esta opcion son aproximadamente el 90% del mejor tiempo de vuelta.
+
+
+Por ejemplo, si su tiempo de vuelta mas rapido posible es de 10 segundos, puede establecer este valor en 9 segundos, lo que evitaria la mayoria de las vueltas falsas y permitiria al piloto superar el tiempo esperado en un segundo.
+
+Sin embargo, es crucial que esta duracion sea menor que su tiempo en la vuelta mas rapida o que se ignoren algunas vueltas validas.",
+
+	"GID_BreakoutTimeMoreWinTitle": "Informacion sobre el Breakout",
+	"GID_BreakoutTimeMoreHeader": "Breakout",
+	"GID_BreakoutTimeMore": "Este tiempo es el tiempo de vuelta minimo que un piloto puede alcanzar y que la vuelta se cuenta. Si el piloto excede el tiempo de Breakout, el piloto es penalizado porque la vuelta no se contara.
+	
+Esto se diferencia del tiempo minimo de vuelta en que el tiempo minimo de vuelta protege contra las vueltas falsas activadas por cualquier motivo. El tiempo Breakout nivela las opciones de juego al obligar a los coches mas rapidos a hacer vueltas mas lentas, lo que permite competir contra cualquier otro coche de clase superior.
+
+Por ejemplo, si el tiempo de vuelta mas rapido de un coche es de 10 segundos, pero otro otro coche utilizado en esta misma carrera es de 15 segundos, puedes establecer el tiempo Breakout en 15 segundos, obligando al mas rapido de los dos automoviles a reducir la velocidad. En este ejemplo, siempre se establece el tiempo de vuelta minimo en unos 9 segundos.",
+
+	"GID_DriftTimeMoreWinTitle": "Informacion sobre el tiempo de cortesia",
+	"GID_DriftTimeMoreHeader": "Tiempo de cortesia",
+	"GID_DriftTimeMore": "Dependiendo del tipo de coches con los que corras, un coche puede continuar avanzando incluso despues de que se corte la corriente de la pista. Este es un movimiento sin cronometro. Aunque el cronometro no este en marcha puede ocurrir que un coche cruze la linea de meta sin corriente en la pista y marque una vuelta.
+
+El tiempo de deriva es el tiempo que Race Coordinator seguira contando vueltas una vez finalizado el tiempo de la manga o carrera. Los coches se detienen deslizandose una vez no tienen corriente y es posible que alguno de ellos cruze la linea de meta y debe contar una vuelta. 
+
+Si no usa reles de seguimiento para controlar la potencia del carril, puede ser mejor establecer el tiempo de desvio en 0 porque los coches podran conducir tan lejos como quieran despues de que termine la carrera o durante una bandera amarilla porque todavia habra energia en la pista
+
+La pantalla Dia de Carrera se puede configurar para que muestre si un cohe marca una vuelta a la deriva o no.",
+
+	"GID_AdjustDriftLapsMoreWinTitle": "Informacion sobre ajustar compensaciones de deriva",
+	"GID_AdjustDriftLapsMoreHeader": "Ajustar vueltas a la deriva",
+	"GID_AdjustDriftLapsMore": "Imagina una pista que no tenga reles que apaguen la energia cuando se detiene una serie. Antes de reiniciar la siguiente serie, mueve los coches hacia donde estaban cuando se detuvo la manga, pero este es un proceso muy impreciso. Que ocurre si pones un coche un segundo por delante de donde realmente estaba? La proxima vuelta de los coches sera aproximadamente un segundo mas rapida de lo que deberia haber sido.
+
+Cabe decir que no es la forma mas justa de realizar un seguimiento de la carrera o de los mejores tiempos de vuelta, ya que no le indicara al RMS que ignore cualquier vuelta que incluya tiempo de deriva. En la practica, las vueltas de deriva solo pueden afectar el resultado de una eliminatoria o una carrera si esta utilizando el sistema de puntos de carrera o la puntuacion de la temporada y esos sistemas de puntos estan configurados para asignar puntos de bonificacion en funcion de las vueltas mas rapidas. Sin embargo, cualquier persona interesada en los mejores tiempos de vuelta precisos aqui tambien querra decir que no.",
+
+	"GID_CallbuttonDelayMoreWinTitle": "Informacion sobre el retraso del boton de llamada",
+	"GID_CallbuttonDelayMoreHeader": "Retraso de llamada",
+	"GID_CallbuttonDelayMore": "Un boton de llamada de pista es un boton fisico que, cuando se presiona, cambia el estado de la carrera. En el RMS (Race Coordinator), su objetivo principal es sacar una bandera amarilla para detener la carrera. Esta opcion se retrasa cuando la carrera se detiene para dar a los pilotos una ventaja adicional si no estuvieron involucrados en el incidente cauisante de la bandera amarilla.
+
+NOTA: En el RMS (Race Coorinator), el boton de llamada sirve para diferentes propositos dependiendo de la condicion de la carrera. Comenzara o reiniciara una carrera en pausa, esto actualmente no esta funcionando. Cancelara la cuenta atras de inicio si esta en curso. Tambien puede adelantar la carrera a la proxima manga o serie. En definitiva, este boton de llmada permite una accion durante la carrera sin necesidad de usar el teclado del ordenador.",
+
+	"GID_FileNotFound": "El archivo seleccionado no existe.",
+
+	"GID_AudioTest":"Probar",
+	"GID_AudioMoreWinTitle": "Texto a voz",
+	"GID_AudioMoreHeader": "Opciones de texto a voz",
+	"GID_AudioMoreNote1": "En Race Coordinator se pueden conifgurar sonidos y avisos de lectura mediante la tecnologia Texto a voz escribiendo directamente en la casilla del adudio a reproducir.",
+	"GID_AudioMoreNote2": "Si el recurso de audio es uno que se reproduce a partir de una secuencia de archivos, como la advertencia de combustible o la cuenta regresiva del semaforo, puede especificar una serie de entradas de texto a voz como una matriz json. El formato de la tabla es, (sin los corchetes intermedios) [\"Primer sonido\", \"Segundo sonido\", ...]. Cada sonido de la lista se reproducira como si fueran las entradas _0, _1, _2, etc. del archivo de prefijo normal y cada entrada puede ser un archivo valido para leer a texto a voz.",
+	"GID_AudioMoreNote3": "Si no quieres que se reproduzca un sonido para un recurso en particular, simplemente escribe una cadena vacia (\"\") como valor de configuracion.",
+	"GID_AudioMoreNote4": "Con texto a voz puedes simplificar la escritura para la lectura de datos u otra informacion. Si escribes los siguientes comandos en el cuadro de audio, texto a voz reproducira los datos o informacion respectiva:
+%n: Nombre del piloto
+%nn: Apodo del piloto
+%l: Numero de carril
+%c: Color del carril
+%t: Tiempo restante para fin de carrera.",
+	"GID_AudioMoreNote5": "*** NOTA: Por ejemplo, para escribir y oir el 'audio de mejor vuelta en entrenamientos', con texto a voz, debes especificarlo y escribirlo como una matriz json con un solo valor. Por ejemplo, [\"Lane%l best lap%t\"] se oira 'Lane 2 best lap 3.134' cuando el piloto en el carril 2 logra su mejor vuelta",
+	// END English to Itailian translation using Google Translator
+	////////////////////////////////////////////////////////////////
+
+	////////////////////////////////////////////////////////////////
+	// BEGIN Needs translation
+	"GID_RAutoAdvanceWarmupHeader": "Inicio automatico del Warmup",
+	"GID_RAutoAdvanceWarmupLess": "Establece cuanto tiempo te gustaria rastrear el encendido antes de que el RC avance automaticamente a la siguiente manga.",
+	"GID_RAutoAdvanceWarmupLabel": "Tiempo (segundos)",
+
+	"GID_RAutoAdvanceWarmupMoreWinTitle": "Informacion sobre el tiempo de avance automatico del Warmup",
+	"GID_RAutoAdvanceWarmupMoreHeader": "Tiempo de avance automatico del Warmup",
+	"GID_RAutoAdvanceWarmupMore": "La corriente de la pista permanecera apagada hasta que el temporizador de avance automatico alcance este valor, momento en el cual la alimentacion se encendera a medida que avanza el Warmup automatico. El tiempo de Warmup solo afecta la corriente de la pista, no se informaran vueltas ni tiempos de vuelta.
+
+Por ejemplo, si el temporizador de avance automatico se establece en 30 segundos y el tiempo de Warmup de avance automatico se establece en 20 segundos, la corriente de la pista se activara 10 segundos despues de que finalice el calentamiento.
+
+El tiempo de Warmup de avance automatico mas el tiempo de Warmup de inicio automatico sera igual al tiempo continuo total en que se enciende la alimentacion de la pista, lo que permite a los pilotos calentar entre series.",
+
+	"GID_RAutoStartWarmupHeader": "Inicio automatico del Warmup",
+	"GID_RAutoStartWarmupLess": "Selecciona durante cuanto tiempo deseas realizar un seguimiento del encendido antes de que comience la manga.",
+	"GID_RAutoStartWarmupLabel": "Tiempo (segundos)",
+
+	"GID_RAutoStartWarmupMoreWinTitle": "Informacion sobre inicio automatico del Warmup",
+	"GID_RAutoStartWarmupMoreHeader": "Inicio automatico del Warmup",
+	"GID_RAutoStartWarmupMore": "La corriente de la pista se encendera tan pronto como Race Coordinator avance a la siguiente manga y la correinte permanecera encendida mientras el tiempo de inicio automatico esta en cuenta regresiva. El tiempo de Warmup solo afecta la alimentacion de la pista, no se informaran vueltas ni tiempos de vuelta.
+
+Como ejemplo, si el temporizador de inicio automatico se establece en 30 segundos y el tiempo de Warmup de inicio automatico se establece en 20 segundos, la alimentacion de la pista estara encendida hasta 10 segundos antes del inicio del Warmup.
+
+El tiempo de Warmup de avance automatico, mas el tiempo de Warmup de inicio automatico sera igual al tiempo continuo total en que se enciende la alimentacion de la pista, lo que permite a los pilotos calentar entre series.",	
+
+	"RD_Segments": "Parciales",
+	"RDFont_Segments":"22",
+	"RD_Segment Time": "Tiempos Parciales",
+	"RD_Current Lap":"Vuelta actual",
+	"RDFont_Current Lap":"22",
+	"RD_Last Lap":"Ultima Vuelta",
+	"RDFont_Last Lap":"22",
+	// END Needs translation
+	////////////////////////////////////////////////////////////////
+
+	"GID_RAudioInvalidCharError": "Archivo no encontrado o caracter no valido. El recurso de audio no puede contener caracteres 'especiales' como [<(menor que),> (mayor que), :(dos puntos), \" (comillas dobles), / (barra oblicua) , \\ (barra invertida), | (barra vertical o tubo),? (signo de interrogacion), * (asterisco)]",
+
+	"GID_RHeatUseCustomFilesMoreWinTitle": "Informacion sobre el archivo de rotacion personalizado",
+	"GID_RHeatUseCustomFilesMoreHeader": "Archivos de rotacion personalizados",
+	"GID_RHeatUseCustomFilesMore": "Los archivos de rotacion personalizados te permiten realizar practicamente cualquier rotacion que puedas imaginar. Sin embargo, debes crear los archivos de rotacion personalizados tu mismo. Si eliges usar archivos de rotacion personalizados, puedes usar el editor de rotacion para crear los archivos.",
+
+	"GID_RDefaultDynamicThrottleControlHeader": "Contrôles dynamiques des gaz",
+	"GID_RDefaultDynamicThrottleControlLess": "Souhaitez-vous configurer des commandes dynamiques des gaz telles que l'usure des pneus, le KERS, etc.",
+
+	"GID_RTireWearUseHeader": "Activer l'usure des pneus",
+	"GID_RTireWearUseLess": "Voulez-vous activer l'usure des pneus?",
+
+	"GID_RTireWearResetHeader": "Réinitialiser l'usure",
+	"GID_RTireWearResetLess": "Voulez-vous réinitialiser l'usure des pneus entre les chaleurs?",
+
+	"GID_RTireWearPctImageHeader": "Indicateur d'usure des pneus Images",
+	"GID_RTireWearPctImageLess": "Veuillez sélectionner le jeu d'images à utiliser pour indiquer l'usure des pneus de voiture. L'ensemble d'images doit avoir au moins trois images dans la série.",
+	"GID_RTireWearPctImageLabel": "Série d'images",
+
+	"GID_RTireWearRateHeader": "Taux d'usure des pneus",
+	"GID_RTireWearRateLess": "Veuillez sélectionner la vitesse à laquelle les pneus doivent s'user. Cette valeur est un pourcentage par seconde basé sur le conducteur à plein régime.",
+	"GID_RTireWearRateLabel": "% Par seconde",
+
+	"GID_RTireWearHeader": "Courbe de frein à l'usure des pneus",
+	"GID_RTireWearLess": "Pour plus de réalisme, le freinage d'une voiture peut être ajusté en fonction de l'usure des pneus de la voiture. Les deux valeurs ci-dessous contrôlent à quel niveau d'usure des pneus la voiture sera autorisée à avoir un freinage complet et à quel point réduire le freinage des voitures en fonction de l'usure des pneus. Le graphique montre comment différents niveaux d'usure des pneus affectent le freinage en fonction de ces paramètres.",
+	"GID_RTireWearMaxLossLabel": "Max Pct de perte de frein",
+	"GID_RTireWearMaxPctLabel": "Usure des pneus% pour Max Freins",
+	"GID_RTireWearPlotHeader": "Usure des pneus contre les freins",
+	"GID_RTireWearPlotXAxis": "Usure des pneus (0 - 100%)",
+	"GID_RTireWearPlotYAxis": "Freins ajustés",
+
+	"GID_RTireWearRecoveryTimeHeader": "Temps de récupération des pneus",
+	"GID_RTireWearRecoveryTimeLess": "Veuillez sélectionner la durée (en secondes) nécessaire pour changer les pneus et réinitialiser l'usure des pneus à 0%. Si un conducteur effectue un arrêt au stand pendant ce temps, l'usure des pneus sera réinitialisée.",
+	"GID_RTireWearRecoveryTimeLabel": "Temps de récupération (en secondes)",
+
+    "GID_RCallbuttonDelayHeader": "Retraso del boton de llamada",
+	"GID_RCallbuttonDelayLess": "Ajustar el tiempo de retraso desde que presiona el boton de llamada hasta que se activa una bandera amarilla y la carrera se detiene.",
+	"GID_RCallbuttonDelayLabel": "Retraso (en segundos)",
+
+	"GID_RHeatReverseHeader":"Invertir el orden de rotacion",
+	"GID_RHeatReverseLess":"Quieres invertir la estructura de las mangas para el tipo de rotacion elegido?
+***Nota: Esta opocion se ingnorara si configuras una carrera por eliminacion (Step-Up).",
+	"GID_RHeatReverseMoreWinTitle": "Informacion sobre invertir el orden de rotacion",
+	"GID_RHeatReverseMoreTitle": "Invertir el orden de rotacion",
+	"GID_RHeatReverseMore": "Seleccionar invertir el orden de rotacion simplemente hace que las mangas generadas retrocedan. Como tal, la primera manga se convierte en la ultima, la segunda manga se convierte en la penultima, etc.
+
+***Nota: si estas corriendo una carrera de eliminatorias, esta opcion sera ignorada.",
+	"GID_RHeatRotationHint":"*Consejo: Clica 'INFO' para obtener mas informacion sobre este tipo de rotacion",
+	"GID_RLap": "Vuelta",
+	"GID_RTime": "Tiempo",
+	"GID_RHeatAllowFinishLabel": "Opciones",
+
+	"RDS_Title":"Configurar la carrera",
+	"RDS_CarsAvailable":"Coches Disponibles",
+	"RDS_DriversAvailable":"Pilotos Disponibles",
+	"RDS_Options":"Opciones",
+	"RDS_DriversRacing":"Pilotos Seleccionados",
+	"RDS_RaceSelection":"Carrera/Campeonato",
+	"RDS_SeasonSelection":"Seleccionar Temporada",
+	"RDS_RaceTypeGroup":"Modos de Carrera",
+	"RDS_DemoModeGroup":"Opciones",
+	"RDS_SingleRaceType":"Carrera",
+	"RDS_EventType":"Campeonato",
+	"RDS_AddAllButton":"Seleccionar Todos",
+	"RDS_RandomizeButton":"Orden Aleatorio",
+	"RDS_ResetButton":"Borrar Todos",
+	"RDS_CarRemoveButton":"Borrar Coche",
+	"RDS_CarRemoveAllButton":"Borrar todos los coches",
+	"RDS_CarRemoveAllButtonFont":"9",
+	"RDS_AddAllButtonTT":"Seleccionar todos los pilotos registrados",
+	"RDS_RandomizeButtonTT":"Mezclar todos los pilotos registrados",
+	"RDS_ResetButtonTT":"Borrar todos los pilotos de la lista",
+	"RDS_CarRemoveButtonTT":"Borrar el coche del piloto seleccionado",
+	"RDS_CarRemoveAllButtonTT":"Borrar todos los coches de todos los pilotos",
+	"RDS_Configure":"Opciones Avanzadas",
+	"RDS_RaceDemoMode":"Modo Demo",
+	"RDS_EnableDebug":"Permitir depuracion",
+	"RDS_StartButton":"Iniciar Carrera",
+	"RDS_ConfigureTT":"Configurar modo Demo",
+	"RDS_RaceDemoModeTT":"Carrera en modo demo con conteo automatico",
+	"RDS_EnableDebugTT":"Permitir depuracion(solo si es requerido y solicitado)",
+	"RDS_StartButtonTT":"Detener la carrera/campeonato seleccionado. Use Ctrl-R o Alt-r como accesos directos",
+	"RDS_File":"Archivo",
+	"RDS_FileTT":"Cargar carrera/abir ubicacion del programa",
+	"RDS_Load":"Cargar carrera o campeonato",
+	"RDS_ProgramData": "Ver el archivo DATABASE",
+	"RDS_InstallDir": "Abrir la carpeta de instalacion del programa",
+	"RDS_LoadTT":"Cargar una carrera o campeonato guardado",
+	"RDS_ProgramDataTT": "Abra el archivo que contiene el programa de la base de datos, los archivos de depuracion y las estadisticas guardadas",
+	"RDS_InstallDirTT": "Abra la carpeta donde esta instalado Race Coordinator",
+	"RDS_CarSetup":"Nuevo Coche",
+	"RDS_CarWizard":"Asistente para registrar un nuevo coche",
+	"RDS_ExpertCarSetup":"Registrar coche-Modo experto",
+	"RDS_CarSetupTT":"Registrar,modificar o borrar coches",
+	"RDS_CarWizardTT":"Registrar un coche con ayuda del asistente",
+	"RDS_ExpertCarSetupTT":"Registrar, modificar o borrar coche",
+	"RDS_DriverSetup":"Nuevo Piloto",
+	"RDS_DriverGuide":"Asistente para crear pilotos",
+	"RDS_DriverWizard":"Registrar piloto con el asistente",
+	"RDS_ExpertDriverSetup":"Registro de Pilotos-Modo experto",
+	"RDS_DriverSetupTT":"Regirstrar, modificar o borrar pilotos",
+	"RDS_DriverGuideTT":"Registrar un piloto con ayuda del asistente",
+	"RDS_DriverWizardTT":"Registrar un nuevo coche usando el asistente",
+	"RDS_ExpertDriverSetupTT":"Agregar-Quitar-Editar mediante la Configuracion/opciones de pilotos",
+	"RDS_TrackSetup":"Configurar Circuito",
+	"RDS_TrackWizard":"Configurar cirucito con el asistente",
+	"RDS_ExpertTrackSetup":"Configurar circuito-Modo experto",
+	"RDS_TrackSetupTT":"Mofificar el circuito registrado",
+	"RDS_TrackWizardTT":"Configurar un circuito nuevo con ayuda del asistente",
+	"RDS_ExpertTrackSetupTT":"Configurar circuito en modo experto",
+	"RDS_RaceSetup":"Configurar Carrera",
+	"RDS_BasicRaceWizard":"Carrera -Asistente modo basico",
+	"RDS_IntermediateRaceWizard":"Carrera -Asisente modo intermedio",
+	"RDS_AdvancedRaceWizard":"Carrera -Asistente modo avanzado",
+	"RDS_BasicRaceGuide":"Asistente-Basico",
+	"RDS_IntermediateRaceGuide":"Asistente-Intermedio",
+    "RDS_AdvancedRaceGuide":"Asistente-Avanzado",
+	"RDS_ExpertRaceSetup":"Configurar carrera-Modo experto",
+	"RDS_RaceSetupTT":"Crear, moficiar o borrar las carreras",
+	"RDS_BasicRaceGuideTT":"Configurar una carrera usando el asistente modo basico",
+	"RDS_IntermediateRaceGuideTT":"Configurar una carrera usando el asistente modo intermedio",
+    "RDS_AdvancedRaceGuideTT":"Configurar una carrera usando el asistente modo avanzado",
+	"RDS_BasicRaceWizardTT":"Configurar una carrera usando el asistente modo basico",
+	"RDS_IntermediateRaceWizardTT":"Configurar una carrera usando el asistente modo intermedio",
+	"RDS_AdvancedRaceWizardTT":"Configurar una carrera usando el asistente modo avanzado",
+	"RDS_ExpertRaceSetupTT":"Crear, modificar o suprimir borrar una carrera",
+	"RDS_EventSetup":"Nuevo campeonato",
+	"RDS_EventWizard":"Campeonato-Usar el Asistente",
+	"RDS_ExpertEventSetup":"Configurar campeonato-Modo experto",
+	"RDS_EventSetupTT":"Crear, modificar o borrar un campeonato",
+	"RDS_EventWizardTT":"Crear un nuevo campeonato con el asistente",
+	"RDS_ExpertEventSetupTT":"Crear, modificar o borrar un campeonato",
+	"RDS_SeasonSetup":"Nueva temporada",
+	"RDS_SeasonWizard":"Crear temporada con el asistente",
+	"RDS_ExpertSeasonSetup":"Configurar temporada-Modo experto",
+	"RDS_SeasonSetupTT":"Crear, modificar o borrar temporadas",
+	"RDS_SeasonWizardTT":"Crear una temporada con el asistente",
+	"RDS_ExpertSeasonSetupTT":"Crear, modificar o borrar temporadas",
+	"RDS_MenuOptions":"Opciones",
+	"RDS_OptionsStats":"Estadisticas",
+	"RDS_OptionsReset":"Reiniciar las ventanas",
+	"RDS_OptionsTips":"Consejos",
+	"RDS_OptionsDeactivate":"Desactivar la licencia",
+	"RDS_Preferences": "Preferencias",
+	"RDS_MenuOptionsTT":"Opciones",
+	"RDS_OptionsStatsTT":"Exportar carreras y otros datos",
+	"RDS_OptionsResetTT":"Reiniciar las ventanas a su estado inicial",
+	"RDS_OptionsTipsTT":"Abrir el consejo del dia",
+	"RDS_OptionsDeactivateTT":"Desactiva la licencia para permitir instalarla en una computadora nueva despues de enviar la informacion a: contact@racecoordinator.net",
+	"RDS_PreferencesTT": "Configurar preferencias",
+	"RDS_About":"About",
+	"RDS_None":"Ninguna",
+
+	"RD_Race Day": "Dia de la carrera",
+	"RD_File":"Archivo",
+	"RD_Save":"Guardar",
+	"RD_Save As...":"Guardar como",
+	"RD_Export Race":"Exportar carrera",
+
+	"RD_Race Director":"Director de carrera",
+	"RD_Start/Resume Heat":"Detener/Reanudar la manga",
+	"RD_Pause Heat":"Pausa",
+	"RD_Add Laps/Sections":"Agregar vueltas/secciones",
+	"RD_Next Heat": "Proxima manga",
+	"RD_Restart Heat": "Reanudar la manga",
+	"RD_Defer Heat": "Aplazar la manga",
+	"RD_Skip Heat":"Saltar la manga",
+	"RD_Skip Race":"Saltar la carrera",
+	"RD_Modify Heats":"Modificar las mangas",
+	"RD_Edit Laps":"Modificar las vueltas",
+	
+	"RD_Track Power":"Corriente de Pista",
+	"RD_Master Power On":"Alimentacion principal On",
+	"RD_Master Power Off":"Alimentacion principal Off",
+	"RD_Lane 1 Power On":"Carril 1 alimentacion On",
+ 	"RD_Lane 1 Power Off":"Carril 1 alimentacion Off",
+	"RD_Lane 2 Power On":"Carril 2 alimentacion On",
+ 	"RD_Lane 2 Power Off":"Carril 2 alimentacion Off",
+	"RD_Lane 3 Power On":"Carril 3 alimentacion On",
+ 	"RD_Lane 3 Power Off":"Carril 3 alimentacion Off",
+	"RD_Lane 4 Power On":"Carril 4 alimentacion On",
+ 	"RD_Lane 4 Power Off":"Carril 4 alimentacion Off",
+	"RD_Lane 5 Power On":"Carril 5 alimentacion On",
+ 	"RD_Lane 5 Power Off":"Carril 5 alimentacion Off",
+	"RD_Lane 6 Power On":"Carril 6 alimentacion On",
+ 	"RD_Lane 6 Power Off":"Carril 6 alimentacion Off",
+	"RD_Lane 7 Power On":"Carril 7 alimentacion On",
+ 	"RD_Lane 7 Power Off":"Carril 7 alimentacion Off",
+	"RD_Lane 8 Power On":"Carril 8 alimentacion On",
+ 	"RD_Lane 8 Power Off":"Carril 8 alimentacion Off",
+	
+	"RD_Windows": "Ventanas",
+	"RD_Leader Board":"Clasificacion de Carrera",
+	"RD_Group Leader Board":"Clasificacion de Grupos",
+	"RD_Heat Results":"Resultado de la Manga",
+	"RD_Race Results":"Resultado de la Carrera",
+	"RD_Season Race Leader Board": "Lideres de carrera en la temporada ",
+	"RD_Season Leader Board": "Clasificacion general de la temporada",
+	"RD_On Deck": "En espera",
+	"RD_Heat List": "Lista de Mangas",
+
+	"RD_"  :"",
+	"RD_ " :" ",
+	"RD_(" :"(",
+	"RD_): ":"): ",
+	"RD_)" :")",
+
+	"RD_Track:":"Circuito",
+	"RD_Heat ":"Manga ",
+	"RD_ of ":" de ",
+	"RD_Race Record Lap": "Record del Circuito",
+	"RD_Race Record Score": "Mejor Puntuacion",
+	"RD_Current Race Best Lap": "Vuelta Rapida de Carrera",
+	"RD_Heat Best Lap": "Mejor Tiempo de Manga",
+	"RD_Name":"Piloto",
+	"RDFont_Name":"28",
+	"RD_ID:": "ID:",
+    	"RD_Penalty": "Sancion",
+	"RDFont_Penalty":"22",
+	"RD_Crashes": "Accidentes",
+	"RDFont_Crashes":"22",
+	"RD_Fuel":"Fuel",
+	"RDFont_Fuel":"28",
+	"RD_Lap":"Vuelta",
+	"RDFont_Lap":"28",
+	"RD_Lap Time":"Tiempo",
+	"RDFont_Lap Time":"28",
+	"RD_Best Lap":"V.Rapida",
+	"RDFont_Best Lap":"28",
+	"RD_Reaction": "Reaccion",
+	"RDFont_Reaction": "22",
+	"RDFont_MPH":"22",
+	"RD_Avg Lap": "Promedio",
+	"RDFont_Avg Lap": "21",
+	"RD_Median Lap": "Media",
+	"RDFont_Median Lap": "28",
+	"RD_Gap": "Diferencia",
+	"RDFont_Gap": "22",
+	"RD_Led": "Lider",
+	"RDFont_Led": "22",
+	"RD_Empty": "Vacio",
+	"RD_Car": "Coche",
+	"RDFont_Car":"22",
+	"RD_Group ": "Grupo ",
+	"RD_Race:":"Tipo de Carrera:",
+	"RD_Gap to 1st":"Dif.Lider",
+	"RDFont_Gap to 1st":"22",
+	"RD_Race Lane Record Lap:": "Record de vuelta en el carril:",
+	"RD_Current Race Lane Best Lap:": "Mejor tiempo de vuelta del carril en la carrera:",
+	"RDFont_Current Race Lane Best Lap:": "14",
+	"RD_Reaction Time:":"Tiempo de reaccion:",
+	"RD_Total Laps:": "Vueltas Totales:",
+	"RD_Best Lap:":"Vuelta Rapida :",
+	"RD_Average Lap Time:":"Promedio :",
+	"RDFont_Average Lap Time:":"21",
+	"RD_Gap:":"Diferencia:",
+	"RD_Laps:":"Vueltas:",	
+	"RDFont_Laps:":"22",	
+	"RD_Race Results Summary":"Resultados de Carrera",
+	"RD_Pos":"Posicion",
+	"RDFont_Pos":"16",
+	"RD_Driver":"Piloto",
+	"RD_Score":"Puntos",
+	"RDFont_Score":"22",
+	"RD_Laps":"Vueltas",
+	"RD_Gap 1st":"Dif.Lider",
+	"RDFont_Gap 1st":"22",
+	"RD_Season Race Leaders":"Lideres de carrera en la temporada",
+	"RD_Season Leaders":"Lideres de la temporada",
+	"RD_Total Races: ":"Carreras Totales",
+	"RD_Practice":"Entrenamiento",
+	"RD_Start Race": "Inicar la carrera",
+	"RD_Pause Race": "Pausar la carrera",
+	"RD_Restart Practice" : "Reanudar entrenamiento",
+	"RD_Drivers":"Pilotos",
+	"RD_Best Time": "Mejor tiempo",
+	"RD_Lap Times": "Tiempo Total",
+	"RD_Segment Times": "Tiempos Parciales",
+	"RD_Driver 1": "Piloto 1",
+	"RD_Driver 2": "Piloto 2",
+	"RD_Driver 3": "Piloto 3",
+	"RD_Driver 4": "Piloto 4",
+	"RD_Driver 5": "Piloto 5",
+	"RD_Driver 6": "Piloto 6",
+	"RD_Driver 7": "Piloto 7",
+	"RD_Driver 8": "Piloto 8",
+	"RD_Driver 9": "Piloto 9",
+	"RD_Driver 10": "Piloto 10",
+	"RD_Driver 11": "Piloto 11",
+	"RD_Driver 12": "Piloto 12",
+	"RD_Clear All": "Eliminar todo",
+	"RD_Clear Lane": "Eliminar el carril",
+	"RD_Clear 1": "Eliminar 1",
+	"RD_Clear 2": "Eliminar 2",
+	"RD_Clear 3": "Eliminar 3",
+	"RD_Clear 4": "Eliminar 4",
+	"RD_Clear 5": "Eliminar 5",
+	"RD_Clear 6": "Eliminar 6",
+	"RD_Clear 7": "Eliminar 7",
+	"RD_Clear 8": "Eliminar 8",
+	"RD_Clear 9": "Eliminar 9",
+	"RD_Clear 10": "Eliminar 10",
+	"RD_Clear 11": "Eiminar 11",
+	"RD_Clear 12": "Eliminar 12",
+	"GID_WavFilter": "Archivos Wav (*.wav)|*.wav|Todos los archivos (*.*)|*.*",
+	"GID_WavTitle": "Elegir audio",
+	"GID_ImageFilter": "Todos los archivos (*.*)|*.*|jpg files (*.jpg)|*.jpg|bmp files (*.bmp)|*.bmp|png files (*.png)|*.png|gif files (*.gif)|*.gif",
+	"GID_ImageTitle": "Elegir imagen",
+	"GID_PngImageTitle": "Elegir archivo .png",
+	"GID_GhostFilter": " Archivo json (*.json)|*.json|Todos los archivos (*.*)|*.*",
+	"GID_GhostTitle":"Elegir un archivo json para el safety car",
+	"GID_XamlFilter": "Archivo xaml (*.xaml)|*.xaml|Todos los archivos(*.*)|*.*",
+	"GID_XamlTltle": "Elegir un arvhivo xaml para el UI",
+	"GID_DialogFileName": "Nombre de archivo",
+	"GID_DialogYes": "Si",
+	"GID_DialogNo": "No",
+	"GID_DialogNext": "Siguiente",
+	"GID_DialogBack": "Atras",
+	"GID_DialogMore": "Info",
+	"GID_DialogSave": "Guardar",
+	"GID_DialogCancel": "Cancelar",
+	"GID_DialogCancelVerify": "Quieres cancelar la configuracion?",
+	"GID_DialogParameterError": "Error en el parametro",
+	"GID_DTitle":"Asistente Nuevo Piloto",
+	"GID_DNameHeader":"Nombre",
+	"GID_DNameLess":"Introduzca el nombre del piloto. Este nombre tambien se usara como apodo.",
+	"GID_DNameName":"Nombre del piloto",
+	"GID_DNameUniqueError": "Nombre no valido.  Este nombre coincide con el nombre de otro piloto.",
+	"GID_DNameEmptyError": "Nombre no valido.  Este nombre debe ser nico y diferente de los otros nombres ya elegidos.",
+	"GID_DAudioConfigHeader": "Configurar el audio por defecto?",
+	"GID_DAudioConfigLess": "Desea utilizar la configuracion de sonido predeterminada para este piloto?  Si configura los sonidos, no se emitira ningun sonido si uno o mas cuadros estan vacios",
+	"GID_DPersonalBestHeader": "Sonido mejor vuelta personal",
+	"GID_DPersonalBestLess": "Haga doble clic en el cuadro de abajo para escuchar el sonido cuando el piloto haya completado su vuelta mas rapida durante toda la carrera.",
+	"GID_DPersonalBestLabel": "Sonido mejor vuelta personal",
+	"GID_DPersonalHeatBestHeader": "Sonido mejor vuelta personal de la manga",
+	"GID_DPersonalHeatBestLess": "Haga doble clic en el cuadro de abajo para escuchar el sonido cuando el piloto haya completado su vuelta mas rapida en la manga.",
+	"GID_DPersonalHeatBestLabel": "Sonido mejor vuelta personal de la manga",
+	"GID_DLapHeader": "Sonido paso por meta",
+	"GID_DLapLess": "Haga doble clic en el cuadro de abajo para escuchar el sonido cuando el piloto haya completado una vuelta.",
+	"GID_DLapLabel": "Sonido de paso por meta",
+	"GID_DRaceLeaderHeader": "Sonido lider de la carrera",
+	"GID_DRaceLeaderLess": "Haga doble clic en el cuadro de abajo para cambiar el sonido cuando el piloto se convierta en el lider de la carrera",
+	"GID_DRaceLeaderLabel": "Sonido lider de carrera",
+	"GID_DHeatLeaderHeader": "Sonido para el lider de la manga",
+	"GID_DHeatLeaderLess": "Haga doble clic en el cuadro de abajo para cambiar el sonido cuando el piloto se convierta en el lider de la manga",
+	"GID_DHeatLeaderLabel": "Sonido para el lider de la manga",	 
+	"GID_DMinLapTimeHeader": "Alarma de audio para un tiempo minimo por vuelta",
+	"GID_DMinLapTimeLess": "Haga doble clic en el cuadro de abajo para cambiar el sonido cuando el piloto **************Haga doble clic en el cuadro de abajo para cambiar el sonido cuando el piloto*************** si/cuando el piloto termina una vuelta mas rapida que el tiempo de vuelta minimo de la carrera. Este sonido es muy util para solucionar problemas de configuracion de carrera y detectar cronometraje erroneo durante una carrera. Deje la casilla en blanco para desactivar este sonido.",
+	"GID_DMinLapTimeLabel": "Alarma de audio para un tiempo minimo por vuelta",
+	"GID_DAudioRecordsHeader": "Reproducir el sonido de la mejor vuelta?",
+	"GID_DAudioRecordsLess": "Quieres reproducir un sonido cuando este piloto logre una vuelta rapida durante la ronda y/o la carrera y/o personal?",
+	"GID_DAudioRecordsDefaultsHeader": "Usar sonidos predeterminados para records",
+	"GID_DAudioRecordsDefaultsHeaderFont": "30",
+	"GID_DAudioRecordsDefaultsLess": "Quieres usar sonidos predeterminados para los records?",
+	"GID_DRecordLapHeader": "Sonido de vuelta rapida",
+	"GID_DRecordLapLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando este piloto logre la mejor vuelta de todas las mangas o series.",
+	"GID_DRecordLapLabel": "Sonido de vuelta rapida",
+	"GID_DRecordLaneLapHeader": "sonido de la vuelta rapida en el carril",
+	"GID_DRecordLaneLapLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando este piloto logre la vuelta rapida del carril en la carrera.",
+	"GID_DRecordLaneLapLabel": "sonido de la mejor vuelta del carril",
+	"GID_DBestLapHeader": "Sonido de la mejor vuelta",
+	"GID_DBestLapLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando este piloto logre la mejor vuelta de todas las mangas o series de la carrera.",
+	"GID_DBestLapLabel": "Sonido de la mejor vuelta",
+	"GID_DBestLaneLapHeader": "Sonido de la mejor vuelta del carril",
+	"GID_DBestLaneLapLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando este piloto logre la vuelta rapida del carril de todas las mangas de la carrera.",
+	"GID_DBestLaneLapLabel": "Sonido de la mejor vuelta en el carril",
+	"GID_DBestHeatLapHeader": "Sonido de la mejor vuelta en la manga o serie",
+	"GID_DBestHeatLapLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando este piloto logre la mejor vuelta de esta manga o serie.",
+	"GID_DBestHeatLapLabel": "Sonido de la mejor vuelta en la manga o serie",
+	"GID_DAudioDefaultMiscHeader": "Utilizar « Por defecto el resto de sonidos",
+	"GID_DAudioDefaultMiscLess": "Deseaa utilizar todos los demas sonidos predeterminados para los anuncios restantes? Incluyen los relacionados con la gestion del combustible y las penalizaciones/advertencias.",
+	"GID_DFalseStartHeader": "Sonido de salida en falso",
+	"GID_DFalseStartLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando este piloto realiza una salida en falso.",
+	"GID_DFalseStartLabel": "Sonido para salida en falso",
+	"GID_DBreakoutTimeHeader": "Sonido dedel tiempo de referencia",
+	"GID_DBreakoutTimeLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando/si este piloto logra un tiempo inferior al tiempo de referencia.",
+	"GID_DBreakoutTimeLabel": "Sonido del tiempo de referencia",
+	"GID_DPitInHeader": "Sonido de entrada en Boxes",
+	"GID_DPitInLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando el piloto se detiene correctamente en el sensor para repostar.",
+	"GID_DPitInLabel": "Sonido de entrada en Boxes",
+	"GID_DFuelLevelHeader": "Sonido de nivel de combustible",
+	"GID_DFuelLevelLess": "Haga doble clic en el cuadro de abajo para cambiar los sonidos que indican los niveles de gasolina. Esto requiere una serie de archivos, todos nombrados con el prefijo seguido del sufijo '_#.wav'\n\n La serie debe constar de al menos 3 archivos donde se escuchara _0.wav cuando el deposito este vacio y cada numero subsiguiente aumentara el nivel de gasolina. Por ejemplo, si usa el archivo predeterminado:\ndata\\audio\\english\\woman\\w_fuel_0.wav\ndata\\audio\\english\\woman\\w_fuel_1.wav\ndata\\audio\\english \ \woman\\w_fuel_2.wav\n\n Se escuehara el sonido w_fuel_0.wav cuando el tanque del piloto este vaclo, w_fuel_1.wav medio lleno y w_fuel_2.wav cuando el tanque este lleno",
+	"GID_DFuelLevelLabel": "Sonido de nivel de combustible",
+	"GID_DImageDefaultHeader": "Usar imagenes predeterminadas",
+	"GID_DImageDefaultLess": "Deseas utilizar las imagenes predeterminadas para este piloto?",
+	"GID_DImageAvatarHeader": "Avatar",
+	"GID_DImageAvatarLess": "Haz clic en este cuadro para cambiar la imagen que representa este piloto. La imagen solo sera visible con ciertos tipos de carreras/pantallas.",
+	"GID_DImageAvatarLabel": "Avatar",
+	"GID_DImageRacingStateHeader": "imagen del estado de carrera",
+	"GID_DImageRacingStateLess": "Haz clic en este cuadro para cambiar la imagen que se usa cuando el piloto corre con bandera verde. La imagen solo sera visible con ciertos tipos de carreras/pantallas.",
+	"GID_DImageRacingStateLabel": "Imagen de las banderas",
+	"GID_DImageLastLapStateHeader": "Imagen de la ultima vuelta",
+	"GID_DImageLastLapStateLess": "Haz clic en este cuadro para cambiar la imagen utilizada cuando el piloto esta en la ultima vuelta de la carrera. La imagen solo sera visible con ciertos tipos de carreras/pantallas.",
+	"GID_DImageLastLapStateLabel": "Imagen de las banderas",
+	"GID_DImageInPitsStateHeader": "Imagen dentro de boxes",
+	"GID_DImageInPitsStateLess": "Haz clic en este cuadro para cambiar la imagen utilizada cuando el piloto esta repostando en boxes. La imagen solo sera visible con ciertos tipos de carreras/pantallas.",
+	"GID_DImageInPitsStateLabel": "Imagen de las banderas",
+	"GID_DImageHeatOverStateHeader": "Imagen de manga finalizada",
+	"GID_DImageHeatOverStateLess": "Haz clic en este cuadro para cambiar la imagen utilizada cuando finaliza la manga o serie. La imagen solo sera visible con ciertos tipos de carreras/pantallas.",
+	"GID_DImageHeatOverStateLabel": "Imagen de las banderas",
+	"GID_DImageDQStateHeader": "Imagen de manga finalizada",
+	"GID_DImageDQStateLess": "Haz clic en este cuadro para cambiar la imagen utilizada cuando finaliza la manga. La imagen solo sera visible con ciertos tipos de carreras/pantallas.",
+	"GID_DImageDQStateLabel": "Imagen de las banderas",
+	"GID_DGhostDefaultHeader": "Piloto real?",
+	"GID_DGhostDefaultLess": "Este piloto existe de verdad?",
+	"GID_DGhostTypeHeader": "Tipo de piloto fantasma",
+	"GID_DGhostTypeLess": "Elegir el tipo de piloto fantasma",
+	"GID_DGhostTypeLabel": "Tipo",
+	"GID_DGhostTypeHuman": "Real",
+	"GID_DGhostTypeConstantSpeed": "Velocidad constante",
+	"GID_DGhostTypeRPathLLane": "Parcours enregistré (voie de gauche)",
+	"GID_DGhostTypeRPathRLane": "Parcours enregistré (voie de droite)",
+	"GID_DGhostTypeSPathLLane": "Parcour intelligent (voie de gauche))",
+	"GID_DGhostTypeSPathRLane": "Parcour intelligent (voie de droite)",
+	"GID_DGhostRecordedFileHeader": "Enregistreur de pace car dynamique",
+	"GID_DGhostRecordedFileLess": "Double cliquer dans la case ci-dessous  pour choisir le fichier dynamique",
+	"GID_DGhostRecordedFileLabel": "Fichier",
+	"GID_DGhostCoastSpeedHeader": "Vitesse dynamique de la pace car",
+	"GID_DGhostCoastSpeedLess": "Choisir la vitesse dynamique de la pace car quand celle-ci perd la synchronisation avec le parcours programmé. Cette vitesse sera utilisée pour une courte période de temps après une sortie de piste ou dans certaines circonstances quand la pace carest à un endroit autre que celui programmé",
+	"GID_DGhostCoastSpeedLabel": "Pourcentage de ralenti",
+	"GID_DGhostLinearSpeedHeader": "Vitesse constante de la pace car",
+	"GID_DGhostLinearSpeedLess": "Choisir la vitesse de la pace car.",
+	"GID_DGhostLinearSpeedLabel": "Pourcentage de ralenti",
+	"GID_DGhostLinearLaneChangingHeader": "Changement de voie de la pace car",
+	"GID_DGhostLinearLaneChangingLess": "Durant la manche la pace car va essayer de changer de voie et essayer de ne pas changer de voie.Le temps inscrit determinel la durée de la manche et le pourcentage de changement de voie determine le nombre de tentative de changement de voie.
+
+Parexemple,en indiquant un temps de 5 et un pourcentage de 10, aura pour effet de tenir le bouton LC (Lane Change) pour 0,5 sec chaque 5 seconde.",
+	"GID_DGhostLinearLaneChangingLabel1": "Durée",
+	"GID_DGhostLinearLaneChangingLabel2": "Pourcentage de changement de voie",
+	"GID_DGhostLinearLapResetHeader": "Remise à zéro de la durée",
+	"GID_DGhostLinearLapResetLess": "Voulez-vous remettre à zéro la durée des changements de voie quand un tour est compté?",
+	"GID_DCompleteHeader": "Creacion de piltos completada",
+	"GID_DCompleteLess": "La creacion del pilto se ha completado. Pulsa guardado para confirmar la configuracion y salir de la guia. De lo contrario, puedes volver atras para hacer cualquier cambio.
+
+Si deseas realizar cambios en esta configuracion despues de la copia de seguridad, puedes utilizar la Guia modo experto de pilotos. Este modo experto te permite copiar esta configuracion como plantilla para una nueva configuracion. Este es el metodo mas facil para crear los controladores en el Race Coordinator, especialmente si los mismos pilotos usan la misma configuracion.",
+	"GID_DCompleteFailTitle": "Creacion de piloto erronea",
+	"GID_DCompleteFailBody": "La creacion del piloto ha fallado. Informa de este error a contact@racecoordinator.net",
+	"GID_RBasicTitle":"Guia de configuracion basica",
+	"GID_RIntermediateTitle":"Guia de configuracion intermedia",
+	"GID_RExpertTitle":"Guia de configuracion avanzada",
+	"GID_RNameHeader":"Nombre de la carrera",
+	"GID_RNameLess":"Introduce el nombre de la carrera.",
+	"GID_RNameName":"Nombre de la carrera",
+	"GID_RNameUniqueError": "Nombre no valido. El nombre debe ser exclusivo de otros nombres ya creados.",
+	"GID_RNameEmptyError": "Nombre no valido.  El nombre debe tener al menos un caracter y ser unico en comparacion con otros nombres ya creados.",
+	"GID_RTrackHeader":"Seleccionar circuito",
+	"GID_RTrackLess":"Selecciona el circuito para esta carrera.",
+	"GID_RTrackLabel":"Circuitos disponibles",
+	"GID_RMinLapTimeHeader": "Tiempo minimo de vuelta",
+	"GID_RMinLapTimeLess": "Introduce el tiempo minimo de vuelta.
+	
+Este tiempo debe ser al menos uno o dos segundos por debajo de la vuelta mas rapida del circuito. Por ejemplo, si la vuelta rapida del circuito es de 6 segundos, el tiempo introducido debe estar entre 3 y 5 segundos. Asi que todavia se podria batir el record de vuelta y se contaria la vuelta.",
+	"GID_RMinLapTimeLabel":"Tiempo (en segundos)",
+	"GID_RBreakoutTimeHeader": "Penalizacion de tiempo (Breakout)",
+	"GID_RBreakoutTimeLess": "Configure el tiempo de penalizacion. Este tiempo de penalizacion es el tiempo minimo de vuelta que un piloto puede hacer para contar la vuelta. Si el tiempo de vuelta es menor el piloto es penalizado ya que su vuelta no se contara.  Esta opcion sirve para igualar un poco mas a los pilotos entre ellos y/o los coches de diferentes clases o potencia.",
+	"GID_RBreakoutTimeLabel": "Tiempo (en segundos)",
+	"GID_RDriftTimeHeader":"Tiempo de cortesia",
+	"GID_RDriftTimeLess":"Introduce el tiempo asignado justo despus de una parada de carrera (Trackcall) (bandera amarilla, final de carrera) que permite contar una vuelta si el coche se desliza y pasa por debjao del puente de la linea de meta.
+
+Al anotar 0 significa que durante una parada de carrera, si el coche continua con su impulso y pasa la linea de meta, no se contara ninguna vuelta.",
+	"GID_RDriftTimeLabel":"Tiempo (en segundos)",
+	"GID_RAdustDriftHeader": "El tiempo de deslizamiento cuenta como mejor vuelta?",
+	"GID_RAdustDriftHeaderFont":"25",
+	"GID_RAdustDriftLess": "Quieres que las vueltas completadas por un piloto que incluyo deslizamiento sean tiempos de vuelta elegibles para los records de pilotos y carreras? Marcarlo no es lo mas justo para no corromper los mejores tiempos, pero en la practica, las vueltas con deslizamiento solo afectan los resultados de una ronda o carrera si esta utilizando el sistema de puntos por carrera o por temporada Y estos puntos estan configurados para vueltas mas rapidas .",
+	"GID_RHeatRoundRobinHeader": "Rotacion Round Robin",
+	"GID_RHeatRoundRobinHeaderFont": "25",
+	"GID_RHeatRoundRobinLess": "Round Robin es el tipo de rotacion mas comunmente usado. Es un tipo de rotacion en la que cada piloto corre una vez por cada carril. La rotacion de todos contra todos amistosa (Round Robin Friendly) es una rotacion estandar y permite que se agreguen pilotos despues de que haya comenzado la carrera.
+	
+Para usar una rotacion Round Robin, elige el tipo de formato y luego haz clic en Siguiente.",	
+	"GID_RHeatRoundRobinLabel":"Tipos de formato Round Robin ",
+	"GID_RHeatRoundRobinRR":"Round Robin",
+	"GID_RHeatRoundRobinRRFont":"18",
+	"GID_RHeatRoundRobinFRR":"Round Robin Amistoso",
+	"GID_RHeatRoundRobinFRRFont":"18",
+	"GID_RHeatRoundRobinERR":"Round Robin Europeo",
+	"GID_RHeatRoundRobinERRFont":"18",
+	"GID_RHeatRoundRobinNone":"Otros formatos",
+	"GID_RHeatRoundRobinNoneFont":"18",	
+	"GID_RHeatRoundRobinMoreWinTitle": "Informacion sobre el formato Round Robin ",
+	"GID_RHeatRoundRobinMoreTitle": "Round Robin Estandar",
+	"GID_RHeatRoundRobinMore": "Una rotacion Round Robin estandar de todos contra todos, hace que cada piloto corra una vez en cada carril, comenzando la primera serie con los mejores cabezas de serie compitiendo entre si. Despues de que termina la manga o serie, cada piloto rota un carril, normalmente al siguiente. El piloto del ultimo carril abandona la manga, a un estado de descanso. En el formato Round Robin estandar, el carril vacio (carril 1) se llena con el peor piloto que esta en descanso. Esta rotacion continua hasta que cada piloto haya corrido en cada carril.
+
+A la derecha hay un ejemplo de un formato Round Robin estandar de 20 pilotos en tu circuito.",
+	"GID_RHeatRoundRobinMoreLabel": "Ejemplo de rotacion",
+	"GID_RHeatRoundRobinFriendlyMoreWinTitle": "Informacion sobre el formato Round Robin Amistoso",
+	"GID_RHeatRoundRobinFriendlyMoreTitle": "Round Robin Amistoso",
+	"GID_RHeatRoundRobinFriendlyMore": "El formato Round Robin amistoso se considera 'amigable' para los que se unen tarde, porque si un piloto llega tarde, les brinda la posibilidad para que el Director de Carrera agregue el piloto a la carrera en curso modificando las proximas mangas.
+
+Una rotacion amistosa de todos contra todos hace que cada piloto corra una vez en cada carril, comenzando la primera serie con los mejores pilotos registrados compitiendo entre si. Despues de que finaliza la serie, cada piloto rota un carril y el piloto en el ultimo carril se mueve a una posicion de descanso. En un round robin amistoso, el carril vacio (carril 1) lo llena el mejor piloto inscrito que se encuentra en estado de descanso. Esta rotacion continua hasta que cada piloto haya corrido en cada carril.
+
+A la derecha hay un ejemplo de un Round Robin amisotos para 20 pilotos.",
+	"GID_RHeatRoundRobinFriendlyMoreLabel": "Ejemplo de rotacion",
+	"GID_RHeatRoundRobinEuroMoreWinTitle": "Informacion sobre el formato Round Robin Europeo",
+	"GID_RHeatRoundRobinEuroMoreTitle": "Round Robin Europeo",
+	"GID_RHeatRoundRobinEuroMore": "El Round Robin Europeo permite que cada piloto corra en cada carril una vez. La rotacion del Round Robin Europeo permite que cada piloto no corra junto al mismo piloto en cada carril dos veces seguidas.
+
+A tu derecha hay un ejemplo de 20 pilotos con una rotacion europea de todos contra todos.",
+	"GID_RHeatRoundRobinEuroMoreLabel": "Ejemplo de rotacion",
+	"GID_RHeatOtherHeader":"Otros formatos de rotacion",
+	"GID_RHeatOtherLess":"En esta ventana aparecen un conjunto de rotaciones de carrera mas comunes. Las rotaciones 'Solo' tienen a cada piloto solo en la pista y pudiendo elegir el carril.
+
+Selecciona el tipo de rotacion que deseas o selecciona 'Rotacion personalizada' para establecer uno de los formatos de rotacion personalizados mas complejos.",
+	"GID_RHeatOtherLabel":"Otros formatos de rotacion",
+	"GID_RHeatOtherPractice":"Entrenamiento",
+	"GID_RHeatOtherSLSAny":" Un carril (Solo)",
+	"GID_RHeatOtherSLSAnyFont": "12",
+	"GID_RHeatOtherSLS":"Rally (mangas Solo)",
+	"GID_RHeatOtherSingleHeat" : "Una sola manga",
+	"GID_RHeatOtherSL":"Un solo carril",
+	"GID_RHeatOtherGhost" "Safety Car grabacion de ruta",
+	"GID_RHeatOtherNone":"Rotacion personalizada",
+	"GID_RHeatPracticeMoreWinTitle": "Informacion sobre el Entrenamiento",
+	"GID_RHeatPracticeMoreHeader": "Entrenamiento",
+	"GID_RHeatPracticeMore": "Una carrera de entrenamiento es un formato de carrera muy especifico que permite el libre acceso a la pista para todos los pilotos. De forma predeterminada, las vueltas y los tiempos de vuelta se muestran para cada carril y los datos se pueden restablecer por carril a medida que los pilotos entran y salen de la pista. Si se selecciona este formato, RC creara una guia sencilla para configurar el formato de entrenamiento.
+
+Las carreras de entrenamiento suelen ajustarse a un tiempo de duracion; sin embargo, establecer el tiempo con valor 0 les permitira correr hasta que el director de la carrera finalice la sesion.",
+	"GID_RHeatGhostMoreWinTitle": "Guardar datos del Safety Car",
+	"GID_RHeatGhostMoreHeader": "Datos del Safety Car",
+	"GID_RHeatGhostMore": "Una carrera de grabacion del Safety Car es una carrera especial destinada a grabar el Safety Car con reproduccion dinamica. Al seleccionar este formato de carrera, se configuraran todas las opciones necesarias para grabar los Safety Car.
+
+Para grabar una reproduccion dinamica del Safety Car, simplemente seleccione esta carrera y comience. Usando CarId 1, ejecute una vuelta de inicio de pie y luego una o mas vueltas de inicio continuas. Cuando haya terminado, pause la carrera y seleccione Guardar en el menu Dia de la carrera. Se guardara todo excepto la vuelta parcial en la que pausaste la carrera. La vuelta parcial sera descartada.
+
+Si planea usar esta grabacion para la reproduccion del Safety Car'inteligente', necesita grabar el auto en cada memoria del carril, en cada carril haciendo cada combinacion de cambio de carril y no de cambio de carril para que el Sfeeda elegir cualquier pieza de la grabacion para reproducirla en cualquier momento.",
+	"GID_RHeatSingleHeatMoreWinTitle": "Informacion sobre una sola rotacion de manga.",
+	"GID_RHeatSingleHeatMoreTitle": "Una sola manga",
+	"GID_RHeatSingleHeatMore": "Una sola rotacion de manga es aquella en la que cada piloto corre en una y solo una manga. Si hay mas pilotos en la carrera de los que permite la pista al mismo tiempo, los pilotos se dividen equitativamente en dos series mas, de modo que cada serie tenga aproximadamente el mismo numero de pilotos.
+
+A la derecha hay un ejemplo de una rotacion de carrera simple de 20 pilotos.",
+	"GID_RHeatSingleHeatMoreLabel": "Ejemplo de Rotacion",
+	"GID_RHeatSLSAnyMoreWinTitle": "Informacion sobre la rotacion por un solo carril (Solo/ no importa el carril que se utilice)",
+	"GID_RHeatSLSAnyMoreTitle": "Un solo carril (Solo/cualquier carril)",
+	"GID_RHeatSLSAnyMore": "Una rotacion de un solo carril (solo cualquier carril) es aquella en la que cada piloto corre solo en la pista, pero puede correr en cualquier carril que elija. El mejor tiempo obtenido en un solo carril es el que cuenta para el piloto. Este tipo de rotacion es ideal para carreras Sprint en las que clasificas a los pilotos por su tiempo de vuelta mas rapido.
+
+A su derecha hay un ejemplo de 20 pilotos con una rotacion para un solo carril (Solo any lane).",
+	"GID_RHeatSLSAnyMoreLabel": "Ejemplo de Rotacion",
+
+	"GID_RHeatSLMoreWinTitle": "Informacion sobre la rotacion para un carril y una sola manga",
+	"GID_RHeatSLMoreTitle": "Un solo carril",
+	"GID_RHeatSLMore": "Una rotacion de un solo carril es aquella en la que cada piloto corre en un solo carril y en una sola manga, pero con otros pilotos en la pista al mismo tiempo. Por lo general, con este tipo de rotacion, a los pilotos se les permite elegir en que carril corren segun su clasificacion de tiempos, lo que le da una ligera ventaja al mejor clasificado en la serie. Para permitir que los pilotos elijan sus propios carriles, el Director de carrera debe usar la interfaz de administracion de eliminatorias para cambiar las asignaciones de carriles antes de que comience la manga.
+
+A tu derecha hay un ejemplo de 20 pilotos con rotacion para un carril.",
+	"GID_RHeatSLMoreLabel": "Ejemplo de Rotacion",
+
+	"GID_RHeatSLSMoreWinTitle": "Informacion sobre el Rallye",
+	"GID_RHeatSLSMoreTitle": "Rally, (mangas en solitario)",
+	"GID_RHeatSLSMore": "Una rotacion Rally consiste en que cada piloto circule en un unico carril y en una sola manga sin nadie mas en la pista. El piloto compite solo en el carril que le asigno el Director de carrera antes de que comience la manga.
+
+A tu derecha hay un ejemplo de 20 pilotos con una rotacion  rally.",
+	"GID_RHeatSLSMoreLabel": "Ejemplo de Rotacion",
+
+	"GID_RHeatUseCustomFilesHeader": "Usar archivos de rotacion customizados",
+	"GID_RHeatUseCustomFilesLess": "Quieres utilizar los archivos de rotacion customizados para definir la rotacion de las mangas? Esta opcion te permite crear cualquier rotacion que puedas imaginar. Usa el editor de rotacion para crear y cargar el archivo customizado de rotacion.",
+
+	"GID_RHeatCustomFilesHeader": "Cargar archivos customizados",
+	"GID_RHeatCustomFilesLess": "Cargar todos los archivos de rotacion customizados que quieres usar para esta carrera. Puedes usar el Editor de Rotacion para crear nuevos archivos o seleccionar los existentes.",
+	"GID_RHeatCustomFilesLabel": "Archivos customizados",
+	"GID_RHeatCustomFilesAddFile": "Agregar",
+	"GID_RHeatCustomFilesRemoveFile": "Quitar",
+	"GID_RHeatCustomFilesRotationEditor": "Editor",
+	"GID_RHeatCustomFilesFilter": "archivos txt (*.txt)|*.txt|todos los arvhivos (*.*)|*.*",
+	"GID_HeatCustomFilesTitle": "Elegir un archivo customizado",
+	"GID_RHeatCustomFilesEmptyError": "Debes cargar al menos un archivo customizado para usar este formato de carrera.",
+
+	"GID_RHeatCustomFilesMoreHeader": "Archivos customizados",
+	"GID_RHeatCustomFilesMoreWinTitle": "Informacion sobre los archivos customizados",
+	"GID_RHeatCustomFilesMoreTitleFont": "20",
+	"GID_RHeatCustomFilesMoreTitle": "Archivos customizados",
+	"GID_RHeatCustomFilesMoreFont": "18",
+	"GID_RHeatCustomFilesMore": "Los archivos customizados definen la rotacion de mangas para un numero especifico de pilotos. Aunque la rotacion personalizada funcionara para cualquier numero de pilotos, si hay mas pilotos en la carrera que los carriles configurados, algunos pilotos quedaran fuera de la carrera. Del mismo modo, si hay menos pilotos en la carrera que en el customizado, algunos carriles quedaran vacios involuntariamente durante la carrera.
+Como solucion, Race Coordinator soporta la carga de cualquier cantidad de archivos customizados para una configuracion de carrera. Race Coordinator seleccionara el archivo customizado que mejor coincida con el numero de pilotos en la carrera real que se esta ejecutando. Si hay un archivo customizado con exactamente el numero de pilotos en la carrera, se usara esa rotacion personalizada; de lo contrario, selecciona un arvhivo customizado lo mas parecido posible.",
+	"GID_RHeatCustomFilesMoreLabel": "Ejemplo de Rotacion",
+
+	"GID_RHeatCustomRRHeader": "Round Robin Customizado",
+	"GID_RHeatCustomRRLess": "Utilizando la lista de carriles, especifica un formato Round Robin Customizado. Cada valor en la lista representa el carril que el piloto debe usar (0 o un numero mayor que el numero de carriles indica que algun piloto no correra). Un carril solo puede aparecer una vez en la lista porque dos pilotos estarian asignados al mismo carril. Si un carril no aparece en la lista, este carril estara vacio durante toda la carrera.
+
+Por ejemplo, para una pista de 4 carriles, [1,2,3,4] es un Round Robin basico, [1,3,4,2] es un Round Robin europeo, [1,0 ,2,0,3,0 ,4,0] es un round Robin basico, pero cada piloto no participara en la siguiente manga, y finalmente [1, 3] es un Round robin basico pero usando solamente los carriles 1 y 3.
+Elige tu Round Robin customizado a continuacion.",
+"GID_RHeatCustomRRLabel": "Secuencia",
+	"GID_RHeatCustomRRTitle": "Error en el formato Round Robin Customizado",
+	"GID_RHeatCustomRRError": "Formato Round Robin customizado no valido.",
+
+	"GID_RHeatCustomRRMoreWinTitle": "Informacion sobre Round Robin Customizado",
+	"GID_RHeatCustomRRMoreHeader": "Round Robin Customizado",
+	"GID_RHeatCustomRRMoreTitleFont": "20",
+	"GID_RHeatCustomRRMoreTitle": "Round Robin Customizado",
+	"GID_RHeatCustomRRMoreFont": "17",
+	"GID_RHeatCustomRRMore": "Round Robin Customizado utiliza el numero de carriles para especificar un formato de R.Robin customizado. Cada valor en la lista representa el carril que el piloto debe usar (0 o un numero mayor que el numero de carriles indica que un piloto descansa). Un carril solo puede aparecer una vez en la lista porque dos pilotos estarian asignados al mismo carril. Si un carril no aparece en la lista, este carril estara vacio durante toda la carrera.
+
+Especifica el formato customizado de Round Robin. Cada valor de la lista es el carril en el cual debe colocarse el piloto (0 o un numero mayor que el numero de carriles indica que alguien esta en modo descanso).
+
+Por ejemplo, en una pista de 4 carriles, [1,2,3,4]es una rotacion R.Robin basica [1,3,4,2] es una rotacion R.Robin europea, [1,0 ,2,0,3,0 ,4,0] es una rotacion R.Robin basica pero cada piloto no participara en la siguiente manga, y finalmente [1, 3] es una rotacion R.Robin basica pero usando solo los carriles 1 y 3.",
+	"GID_RHeatCustomRRMoreLabel": "Ejemplo de Rotacion",
+
+	"GID_RPracticeAudioDefaultsHeader": "Utilizar los sonidos por defecto?",
+	"GID_RPracticeAudioDefaultsLess": "Quieres utilizar los sonidos por defecto para este entrenamiento?",
+
+	"GID_RAudioCalloutsHeader": "Sonidos durante la carrera",
+	"GID_RAudioCalloutsLess": "Agrega cualquier aviso sonoro. Para agregar sonidos de aviso y ajustarlos a tiempo o vueltas, elije la advertencia, luego indica el momento para escucharla tiempo/vueltas y luego presiona Agregar.",
+	"GID_RAudioAutoStartCalloutsHeader": "Avisos sonoros automaticos para el inicio de las mangas",
+	"GID_RAudioAutoStartCalloutsHeaderFont": "25",
+	"GID_RAudioAutoStartCalloutsLess": "Agrega cualquier aviso de sonido con inicio automatico. Para agregar advertencias de sonido, elije la advertencia, luego indica el tiempo justo para escucharla y luego presiona Agregar.",
+	"GID_RAudioCalloutsLabel": "Configuracion de avisos",
+	"GID_RAudioCalloutsCallout": "Avisos",
+	"GID_RAudioCalloutsCalloutTime": "Tiempo (segundos)",
+	"GID_RAudioCalloutsCalloutLap": "Vueltas",
+	"GID_RAudioCalloutsCalloutLapFont": "12",
+
+	"GID_RAudioCalloutsAdd": "Agregar>>",
+	"GID_RAudioCalloutsRemove": "<<Suprimir",
+	"GID_RAudioCalloutsList": "Lista de sonidos",
+	"GID_RAudioCalloutError": "No se puede agregar el sonido. Archivo no encontrado.",
+
+	"GID_RAudioCalloutMoreWinTitle": "Informacion sobre la configuracion de sonidos durante la carrera",
+	"GID_RAudioCalloutMoreHeader": "Configurar sonidos durante la carrera",
+	"GID_RAudioCalloutMoreWinHeader": "Configurar sonidos durante la carrera",
+	"GID_RAudioCalloutMore": "Los sonidos y lecturas durante la carrera, se pueden configurar para que se oigan en momentos especificos, como la cuenta regresiva de inicio automatico o a medida que avanza una carrera. Para hacer esto, debes agregar un sonido en formato .wav en cada momento en que quieras que se produzca el aviso/lectura.
+Primero, indica el tiempo (en segundos) en la que deseas que se produzca el aviso. Ten en cuenta que para las carreras configuradas a vueltas, el valor del aviso de sonido durante la carrera seria un recuento de vueltas, no de tiempo.
+Luego selecciona el sonido .wav para reproducir. Aqui hay dos opciones. Puedes hacer doble clic en el cuadro de aviso de sonido y seleccionar un archivo .wav grabado para reproducirlo o puedes hacer un solo clic y usar texto a voz. El texto a voz verbalizara (lectura) lo que escribas y puedes crear lecturas de tiempos. Si escribes lo siguiente en el cuadro del aviso de sonido, se reemplazara con el tiempo/recuento de vueltas, segun corresponde:
+%t: Lectura del tiempo relevante (o numero de vuelta)
+
+Por ejemplo, 'quedan %t segundos antes del inicio de la carrera' podria usarse con tiempos de 60 y 10 segundos para indicar a los pilotos que la carrera comenzara pronto.",
+	
+	"GID_RPracticeAudioHeader": "Sonido de vuelta rapida durante el entrenamiento",
+	"GID_RPracticeAudioHeaderFont": "25",
+	"GID_RPracticeAudioLess": "Seleccionar el sonido para la vuelta rapida durante el entrenamiento",
+	"GID_RPracticeAudioLabel": " Archivo de audio",
+
+	"GID_RPracticeLapAudioHeader": "Sonido por cada vuelta",
+	"GID_RPracticeLapAudioLess": "Selecciona el archivo de audio cada vez que un piloto obtenga una vuelta en el entrenamiento.",
+	"GID_RPracticeLapAudioLabel": "Archivo de audio",
+
+	"GID_RLapBasedHeader": "Configurar la carrera a tiempo o vueltas",
+	"GID_RLapBasedHeaderFont": "25",
+
+	"GID_RLapBasedLess": "Selecciona abajo si la carrera se completa a un cierto numero de vueltas o a un tiempo establecido",
+
+	"GID_RLapBasedValueHeader": "Establece el numero de vueltas para terminar la carrera",
+	"GID_RLapBasedValueHeaderFont": "25",	"GID_RLapBasedValueLess": " Elige el numero de vueltas para que termine la carrera. Si el valor es 0, la carrera nunca termina. El Director de carrera puede finalizarla manualmente.",
+	"GID_RLapBasedValueLabel": "Numero de vueltas",
+
+	"GID_RTimeBasedValueHeader": "Establece el tiempo de duracion de la carrera",
+	"GID_RTimeBasedValueHeaderFont": "25",
+	"GID_RTimeBasedValueLess": "Elige en segundos la duracion de la carrera. Si el valor es 0, la carrera nunca termina. El Director de carrera puede finalizarla manualmente.",
+	"GID_RTimeBasedValueLabel": "Tiempo(segundos)",
+
+	"GID_RHeatLapCountHeader": "Clasificacion de la carrera por el numero de vueltas",
+	"GID_RHeatLapCountHeaderFont": "25",
+	"GID_RHeatLapCountLess": "Quieres clasificar cada eliminatoria por el numero de vueltas",
+	"GID_RHeatFastestLapHeader": "Clasificacion de la manga/serie por vuelta mas rapida?",
+	"GID_RHeatFastestLapHeaderFont": "25",
+	"GID_RHeatFastestLapLess": "Quieres puntuar cada manga por el tiempo de vuelta mas rapido registrado en la manga? Si selecciona No, la manga/serie se puntuara segun el tiempo de vuelta total de cada piloto.",
+
+	"GID_RHeatAllowFinishHeader": "Configuracion del final de carrera",
+	"GID_RHeatAllowFinishLess": "Elige como la carrera debe finalizar. La carrera puede terminar cuando se cumplen las condiciones preestablecidas, permitir que los pilotos completen su vuelta o hasta que cada piloto cumpla con las condiciones. Si permite que los pilotos completen su vuelta, Race Coordinator puede estimar los segmentos (comas) de la vuelta que ha completado el piloto.
+
+Si ha optado por establecer la puntuacion segun el tiempo/manga, se recomienda encarecidamente elegir uno de los posibles finales de carrera. De lo contrario, los pilotos se clasifican en orden de quien termino primero, la vuelta anterior.",
+	"GID_RHeatAllowFinishNone": "No permitir que finalice la manga/carrera.",
+	"GID_RHeatAllowFinishNoneFont": "14",
+	"GID_RHeatAllowFinishAllowOne": "Permitir una ultima vuelta",
+	"GID_RHeatAllowFinishAllowOneFont": "14",
+	"GID_RHeatAllowFinishAllowOneAS": "Permitir una ultima vuelta y agregar la coma",
+	"GID_RHeatAllowFinishAllowOneASFont": "14",
+	"GID_RHeatAllowFinishAllowFull": "Habilitar la finalizacion de manga/carrera para todos",
+	"GID_RHeatAllowFinishAllowFullFont": "14",
+
+	"GID_RStepUpHeader": "Carreras por eliminacion",
+	"GID_RStepUpLess": "Una carrera por eliminacion (Step Up Race) implica que los ganadores de una carrera anterior participen en la carrera siguiente en la que tambien se eliminaran pilotos. En ultima instancia, el ganador de la ultima clasificatoria es el ganador de la eliminatoria. Este tipo de carreras se usa generalmente para permitir que los pilotos que estan al final de la lista puedan ganar carreras y subir al podio.
+
+Quieres elegir una carrera con cualificaciones?",
+
+	"GID_RStepUpMoreWinTitle": "Informacion sobre carreras por eliminacion",
+	"GID_RStepUpMoreHeader": "Carreras por eliminacion",
+	"GID_RStepUpMore": "Una carrera eliminatoria es aquella en la que los ganadores de una eliminatoria o serie de eliminatorias avanzan o suben al siguiente eslabon de la escalera. En ultima instancia, el ganador de la ultima manga o serie de mangas es el ganador de toda la carrera.
+
+Este tipo de carrera generalmente se usa como una carrera final en un campeonato y normalmente se realizara despues de una carrera clasificatoria. Las carreras de ascenso permiten que los pilotos con las cabezas de serie mas bajas ganen su camino hacia el circulo de ganadores y dan una ventaja a los pilotos con las cabezas de serie mas altas.",
+
+	"GID_RStepUpCountHeader": "Pilotos que pasan a la eliminatoria siguiente",
+	"GID_RStepUpCountHeaderFont": "25",
+	"GID_RStepUpCountLess": "Indica el numero de pilotos que acceden a la siguiente elinminatoria. Este numero debe ser al menos uno e inferior al numero de pilotos registrados.",
+	"GID_RStepUpCountLabel": "Numero",
+
+	"GID_RAccumulateHeader": "Acumular los puntos de las mangas",
+	"GID_RAccumulateLess": "Quieres acumular las puntuaciones de los pilotos de cada manga para establecer una puntuacion total? Si elige no, la mejor carrera de cada piloto determinara el rango y la puntuacion del piloto.",
+	"GID_RDropNHeader": "Drop N Heats",
+	"GID_RDropNLess": "Al acumular puntos de las mangas para determinar la puntuacion general de un piloto, es posible descartar el numero N mas bajo de mangas para cada piloto. Esto le permite a un piloto tener una(s) serie(s) mala(s) y aun asi tener una buena clasificacion general al hacerlo bien en las otras series en las que corra el piloto.",
+	"GID_RDropNLabel": "Numero",
+
+	"GID_RRepeatCountHeader": "Cantidad de rotaciones",
+	"GID_RRepeatCountLess": "Especifica el numero de veces que cada piloto debe rotar. Por lo general, cada piloto rota unas sola vez.",
+	"GID_RRepeatCountLabel" "Cantidad de rotaciones",
+
+	"GID_RUsePointsHeader": "Clasificacion general por puntos?",
+	"GID_RUsePointsLess": "Te gustaria calcular la clasificacion general asignando puntos a cada piloto en funcion de lo bien que lo hacen en cada manga? Si selecciona SI, deberas configurar los puntos asignados por clasificacion de carrera y otras situaciones de puntos de bonificacion.",
+	"GID_RPointsScoreListHeader": "Puntos para la clasificacion de la manga",
+	"GID_RPointsScoreListLess": "Indica la puntuacion de cada posicion al final de la carrera. El primer numero corresponde al primer lugar, el segundo al segundo lugar, etc. Si registras menos numeros que pilotos, significara que el resto de pilotos tendran 0 puntos.",
+	"GID_RPointsScoreListLabel": "Puntuacion",
+	"GID_RPointsScoreListErrorTitle": "Puntuacion no valida",
+	"GID_RPointsScoreListError": "La puntaucion establecida no es valida. Una lista valida debe constar de numeros separados por comas, por ejemplo, [20, 18, 16, 15]",
+
+	"GID_RPointsCarryOverPctHeader": "Porcentaje de bonificacion por carrera",
+	"GID_RPointsCarryOverPctLess": "Establece el porcentaje de puntuacion de carrera para sumarlo como bonificacion al total de puntos del piloto. Esto se puede usar para bonificar a un piloto por ganar con la mayor diferencia posible.
+
+Por ejemplo, si este valor se establece en 50 % y un piloto ha dado 30 vueltas en la carrera, se le otorgarian 15 puntos adicionales por su total de puntos general.",
+	"GID_RPointsCarryOverPctLabel": "Porcentaje",
+
+	"GID_RPointsUseHeatBonusPointsHeader": "Aplicar puntos de bonificacion en una manga?",
+	"GID_RPointsUseHeatBonusPointsHeaderFont": "25",
+	"GID_RPointsUseHeatBonusPointsLess": "Quieres dar puntos de bonificacion a los pilotos en funcion de su rendimiento en cada manga?",
+
+	"GID_RPointsBonusHeatFastestLapHeader": "Bonificacion por la vuelta rapida",
+	"GID_RPointsBonusHeatFastestLapHeaderFont": "25",
+	"GID_RPointsBonusHeatFastestLapLess": "Establece los puntos de bonificacion por conseguir la vuelta rapida en la manga.",
+	"GID_RPointsBonusHeatFastestLapLabel": "Puntos de bonificacion",
+
+	"GID_RPointsBonusHeatLedMostLapsHeader": "Bonificacion por liderar mas vueltas durante la manga",
+	"GID_RPointsBonusHeatLedMostLapsHeaderFont": "25",
+	"GID_RPointsBonusHeatLedMostLapsLess": "Establece los puntos de bonificacion para el piloto que mas vueltas ha ido lider durante la manga.",
+	"GID_RPointsBonusHeatLedMostLapsLabel": "Puntos de bonficacion",
+
+	"GID_RPointsBonusHeatLedLapsHeader": "Bonificacion por liderar al menos una vuelta en cada manga",
+	"GID_RPointsBonusHeatLedLapsHeaderFont": "25",
+	"GID_RPointsBonusHeatLedLapsLess": "Establece los puntos de bonificacion para el piloto que ha sido lider al menos una vuelta en cada manga.",
+	"GID_RPointsBonusHeatLedLapsLabel": "Puntos de bonificacion",
+
+	"GID_RPointsUseOverallBonusPointsHeader": "Bonificacion por rendimiento general?",
+	"GID_RPointsUseOverallBonusPointsLess": "Establecer puntos de bonificacion por el rendimiento general",
+
+	"GID_RPointsBonusFastestLapHeader": "Bonificacion por la vuelta mas rapida",
+	"GID_RPointsBonusFastestLapLess": "Establece los puntos de bonificacion para el piloto que ha hecho la vuelta mas rapida al final de la carrera",
+	"GID_RPointsBonusFastestLapLabel": "Puntos de bonificacion",
+
+	"GID_RPointsBonusLedMostLapsHeader": "Bonificacion por liderar mas vueltas durante la carrera",
+	"GID_RPointsBonusLedMostLapsHeaderFont": "25",
+	"GID_RPointsBonusLedMostLapsLess": "Establece los puntos de bonificacion para el piloto que tenga mas vueltas lideradas en la carrera.",
+	"GID_RPointsBonusLedMostLapsLabel": "Puntos de bonificacion",
+
+	"GID_RPointsBonusLedLapsHeader": "Bonificacion por las vueltas lideradas",
+	"GID_RPointsBonusLedLapsLess": "Establece los puntos de bonificacion para cada piloto que lidero al menos una vuelta durante la carrera.",
+	"GID_RPointsBonusLedLapsLabel": "Puntos de bonifacion",
+
+	"GID_RPointsOneLaneBonusPerHeader": "Bonficacion unica por piloto y carril",
+	"GID_RPointsOneLaneBonusPerLess": "Establecer una sola bonificacion por piloto y carril, evitando asi que el mismo piloto obtenga todas las bonificaciones en cada carril. Al elegir esta opcion, un piloto con varias bonificaciones solo recibira puntos de bonificacion por su mejor resultado. El segundo mejor piloto recibira los segundos mejores puntos de bonificacion, etc.",
+
+	"GID_RPointsBonusFastestLaneLapHeader": "Bonificacion por la vuelta mas rapida del carril",
+	"GID_RPointsBonusFastestLaneLapHeaderFont": "25",
+	"GID_RPointsBonusFastestLaneLapLess": "Establece los puntos de bonificacion por la vuelta rapida del carril",
+	"GID_RPointsBonusFastestLaneLapLabel": "Puntos de bonificacion",		
+
+	"GID_RTiebreakerNone": "Ninguno",
+	"GID_RTiebreakerAverageLapTime": "Tiempo promedio de vuelta",
+	"GID_RTiebreakerMedianLapTime": "Tiempo medio de vuelta",
+	"GID_RTiebreakerFastestLapTime": "Tiempo de vuelta mas rapido",
+
+	"GID_ROverallTiebreakerHeader": "Desempate",
+	"GID_ROverallTiebreakerLess": "Selecciona cmo te gustaria desempatar en la clasificacion general.",
+	"GID_ROverallTiebreakerLabel": "Desempates",
+	"GID_ROverallTiebreakerHint": "***Nota: las carreras Drop N no contaran las eliminatorias eliminadas como parte del desempate, sin embargo, es posible que no funcionen completamente como se esperaba.",
+	"GID_RHeatTiebreakerHeader": "Desempate de la manga",
+	"GID_RHeatTiebreakerLess": "Selecciona como te gustaria desempatar en la clasificacion de la manga.",
+
+
+	"GID_RDefaultStartSetupHeader": "Usar parametros iniciales para las mangas?",
+	"GID_RDefaultStartSetupHeaderFont": "25",
+	"GID_RDefaultStartSetupLess": "Quieres usar la configuracion inicial para las mangas?",
+
+	"GID_RHotStartHeader": " Comienzo en caliente",
+	"GID_RHotStartLess": "Hay corriente en la pista antes de encenderse el semaforo?",
+
+	"GID_RFalseStartRestartHeader": "Reanudar la salida por salida en falso",
+	"GID_RFalseStartRestartLess": "Quieres un reinicio por una salida en falso? Puedes imponer una sancion al piloto infractor y volver a empezar.",
+
+	"GID_RFalseStartTimePenaltyHeaderFont": "25",	
+	"GID_RFalseStartTimePenaltyHeader": "Penalizacion de tiempo por salida en falso",
+	"GID_RFalseStartTimePenaltyLess": "Establece la penalizacion de tiempo en segundos al piloto que inicia en falso, adelantandose en la salida estando el semaforo en rojo. Si tienes instalados reles por carril, esta es una buena manera de penalizar a un piloto, ya que hara que se desconecte la corriente del carril durante este periodo de tiempo. De lo contrario, la penalizacion de vuelta es probablemente la mejor opcion de penalizacion, sin embargo, eso depende de la configuracion de la carrera y las preferencias personales.",
+	"GID_RFalseStartTimePenaltyLabel": "Tiempo (en segundos)",
+
+	"GID_RFalseStartLapPenaltyHeader": "Penalizacion de vueltas al salir en falso",
+	"GID_RFalseStartLapPenaltyLess": "Establece el numero de vueltas de penalizacion por una salida en falso, es decir, adelantarse en la salida estando el semaforo en rojo",
+	"GID_RFalseStartLapPenaltyLabel": "Vueltas",
+
+	"GID_RStartBehindHeader": "Modo de salida",
+	"GID_RStartBehindLess": "La carrera comienza detras de la linea del puente de sensores?",
+
+	"GID_RStartCurrentHeader": "Comienza la manga en el mismo lugar",
+	"GID_RStartCurrentLess": "Quieres empezar cada manga en el mismo lugar del carril donde cada piloto se detuvo en la manga anterior?",
+
+	"GID_RAddGhostsHeader": "Agregar un Safety Car?",
+	"GID_RAddGhostsLess": "Voulez-vous ajouter des Pace car pour que toutes les voies soit occupées par une voiture?
+	
+***Note: Pour cette option vous devez créeer un/des pilotes de Pace car en utilisant une des options de créations de pilotes. Si vous ajouter des Pace car et changer d'avis, simplement ne pas mettre ces voitures sur la piste et lancer la manche.",
+
+	"GID_RBlackFlagTypeHeader": "Type de drapeau noir",
+	"GID_RBlackFlagTypeLess": "Choisir sous drapeau noir, quel type de pénalité  vous voulez appliquer pour la course. Si vous choississez 'Aucun' aucune pénalité sera appliquée pour les faux-départs et vitesse excessive dans les puits",
+	"GID_RBlackFlagTypeLabel" "Type",
+	"GID_RBlackFlagTypeDriveThrough": "Passage aux puits",
+	"GID_RBlackFlagTypeStopGo": "Passage aux puits Arret-départ",
+	"GID_RBlackFlagTypeTimed": "Pénalité de temps durant l'arrêt aux puits",
+	"GID_RBlackFlagTypeNone": "Ninguna",
+
+	"GID_RTimedBFValueHeader": "Temps d'arrêt ",
+	"GID_RTimedBFValueLess": "Choisir le nombre de secondes durant lesquelles le pilote doit s'arréter aux puits, dû à une pénalité sous drapeau noir.",
+	"GID_RTimedBFValueLabel": "Temps (en secondes)",
+
+	"GID_RPitThrottlePctHeader": "Vitesse maximum dans les puits",
+	"GID_RPitThrottlePctLess": "Entrez le pourcentage maximum de vitesse permise en entrant aux puits avant d'infliger une pénalité sous drapeau noir. Si cette valeur est 100 il n'y aura pas de pénalité.",
+	"GID_RPitThrottlePctLabel": " Pourcentage",
+
+	"GID_RFalseStartThrottlePctHeader": "Pourcentage permis lors d'un faux-départ",
+	"GID_RFalseStartThrottlePctLess": "Entrez le pourcentage maximum permis lors d'un faux-départ avant d'infliger une pénalité sous drapeau noir. Si cette valeur est 100 il n'y aura pas de pénalité.",
+	"GID_RFalseStartThrottlePctLabel": "Pourcentage",
+
+	"GID_RBlackFlagToleranceHeader": "Tolérance drapeau noir",
+	"GID_RBlackFlagToleranceLess": "Indiquez le nombre de tours qu'un pilote peut faire sous un drapeau noir avant d'être disqualifié de la manche.",
+	"GID_RBlackFlagToleranceLabel": "Nombre de tours",
+
+	"GID_RFuelUseHeader": "Carrera con Combustible",
+	"GID_RFuelUseLess": "Quieres que esta carrera utilice consumo de combustible?",
+
+	"GID_RFuelUseMoreWinTitle": "Informacion carrera con combustible",
+	"GID_RFuelUseMoreHeader": "Carrera con combustible",
+	"GID_RFuelUseMore": "Race Coordinator se puede configurar para simular el uso de combustible. Cuando las carreras de combustible estan habilitadas, los coches usaran combustible despues de cada vuelta que completen. Puedes configurar cuanto combustible se usa por vuelta, donde los tiempos de vuelta mas rapidos usan mas combustible que los tiempos de vuelta mas lentos, y tambien puedes configurar el tiempo que tarda un coche en repostar. Por lo tanto, puedes configurar dos factores, la frecuencia con la que necesitas repostar y durante cuanto estas parado en boxes.
+
+Dependiendo de la interfaz de tu pista, puedes hacer una parada en boxes deteniendo el coche en el sensor de carril (IR, webcam, reeds) o en configuraciones de interfaz mas avanzadas, puedes crear una zona de boxes en la que el coche se detiene entre dos sensores.", 
+
+"GID_RFuelAnalogUsageHeader": "Consumo de combustible",
+"GID_RFuelAnalogUsageLess": "Configura cuanto combustible puede contener un coche y cuanto combustible debe usar en cada vuelta.",
+
+	"GID_RFuelUsageMoreWinTitle": "Informacion sobre el uso de combustible",
+	"GID_RFuelUsageMoreHeader": "Uso de combustible",
+	"GID_RFuelUsageMore": "La frecuencia con la que un piloto debe parar en boxes esta determinada por la capacidad del deposito, la cantidad de combustible que usa el coche, un tiempo de vuelta de referencia y la curva de uso de combustible que se elige. Los pilotos que dan vueltas mas rapidas usan mas combustible que los que dan vueltas mas lentas.
+Usando la configuracion predeterminada como ejemplo, el primer grafico, muestra que un piloto que da una vuelta de 3,5 seg. gastara unas 40 unidades de combustible.Del mismo modo, el grafico muestra que un piloto con una vuelta de 6,95 seg. consumira 20 uds.Y, por ultimo, el grafico muestra que un piltoto que da una vuelta de 14 seg. gastara unas 10 uds.El segundo grafico muestra aproximadamente cuanto tiempo tardara un piloto en quedarse sin combustible si marca el mismo tiempo de vuelta en cada vuelta. Por ejemplo, con la configuracion predeterminada, un piloto que realiza un tiempo de vuelta constante de 6,95 seg. debera parar despues de unos 60 seg. Con estos dos graficos, puedes ajustar la frecuencia con la que los pilotos que realizan varios tiempos de vuelta necesitaran repostar.
+Usando la curva lineal, se consume combustible en una tasa de:
+   ([tiempo de vuelta de referencia] / [tiempo de vuelta real]) * [uso por tiempo de referencia]",
+
+	"GID_RFuelAnalogUsageCapacityLabel": "Capacidad",
+	"GID_RFuelCapacityLess": "Establece la capacidad del deposito.",
+	"GID_RFuelCapacityLabel": "Litros"
+	"GID_RFuelAnalogUsageReferenceTimeLabel": "Tiempo vuelta referencia",
+	"GID_RFuelAnalogUsageCurveTypeLabel": "Tipo de consumo",
+
+	"GID_RFuelAnalogUsageLabel": "Consumo por segundo",
+	"GID_RFuelAnalogPlotHeader": "Consumo por segundo",
+	"GID_RFuelAnalogPlotXAxis": "Tiempo de vuelta(segundos)",
+	"GID_RFuelAnalogPlotYAxis": "Consumo",
+	"GID_RFuelAnalogPlot2Header": "Tiempo repostar/tiempo de vuelta constante",
+	"GID_RFuelAnalogPlot2XAxis": "Tiempo de parada en boxes (segundos)",
+	"GID_RFuelAnalogPlot2YAxis": "Tiempo de vuelta (segundos)",
+	"GID_RFuelDigitalUsageHeader": "Consumo",
+	"GID_RFuelDigitalUsageLess": "Cuantos litros de gasolina/segundo se consumiran a toda velocidad? El consumo se calculara por el porcentaje de la medicion multiplicando este valor por el tiempo total durante el cual los gatillos estan al fondo.
+
+Por ejemplo, si un piloto funciona a media potencia durante 0,25 segundos, el consumo real sera este valor X por 0,5 y luego se graduara en un segundo valor multiplicandolo por 0,25."
+	"GID_RFuelDigitalUsageLabel": "Uso maximo de energia",
+	"GID_RFuelTypeLinear": "Lineal",
+	"GID_RFuelTypeQuadratic": "Cuadratica",
+	"GID_RFuelTypeCubic": "Cubica",
+	"GID_RFuelDigitalPlotHeader": "Utilisation d'essence",
+	"GID_RFuelDigitalPlotXAxis": "Puissance (0 - 100%)",
+	"GID_RFuelDigitalPlotYAxis": "Utilisation d'essence par Seconde",
+
+	"GID_RFuelStartLevelHeader": "Nivel de combustible al inicio de carrera",
+	"GID_RFuelStartLevelLess": "Establece el nivel de gasolina del tanque al inicio de la carrera. Este valor puede ser mayor o menor que la capacidad del tanque y solo se usa para la primera manga del piloto y si elige tener el deposito lleno al comienzo de cada managa.",
+	"GID_RFuelStartLevelLabel": "Nivel inicial",
+
+	"GID_RFuelPitDelayHeader": "Retraso de parada en boxes",
+	"GID_RFuelPitDelayLess": "Indica el tiempo en segundos antes de empezar a repostar.",
+	"GID_RFuelPitDelayLabel": "Retraso",
+
+	"GID_RFuelRefuelRateHeader": "Velocidad para repostar",
+	"GID_RFuelRefuelRateLess": "Establece el ratio de repostaje, unidades por cada segundo.",
+	"GID_RFuelRefuelRateLabel": "Ratio (unidades/segundo)",
+
+	"GID_RFuelResetHeader": "Restaurar el deposito",
+	"GID_RFuelResetLess": "Quieres rellenar el depositoj al inicio de cada manga?",
+
+	"GID_RFuelEndHeatHeader": "Fuera de carrera",
+	"GID_RFuelEndHeatLess": "Quieres que termine la carrera para un piloto sin gasolina?",
+	"GID_RFuelLevelImageHeader": "Imagen indicador de combustible",
+	"GID_RFuelLevelImageLess": "Elige la serie de imagenes para indicar el nivel de gasolina. La serie de imagenes debe ser de al menos 3.",
+	"GID_RFuelLevelImageLabel": "Serie de imagenes",
+
+"GID_RCnLHeader": "Accidente y Aprendizaje?",
+	"GID_RCnLLess": "Quieres una carrera con accidente y aprendizaje?",
+	"GID_RCnlMoreWinTitle": "Informacion sobre carreras con accidente y aprendizaje",
+	"GID_RCnlMoreHeader": "Accidente y Aprendizaje",
+	"GID_RCnlMore": "Una carrera con accidentes y aprendizaje es una carrera en la que un piloto puede ser penalizado y/o descalificado de la carrera/manga si se sale de la pista con demasiada frecuencia. Con suerte, despues de suficientes penalizaciones, aprendera a conducir en la pista mejorando los tiempos de vuelta.
+
+Los accidentes se detectan por tiempos de vuelta demasiado largos o por un piloto que usa un boton de llamada instalado en el carril.",
+	"GID_RCnLDeslotTimeHeader": "Accidente por tiempo",
+	"GID_RCnLDeslotTimeLess": "Establece el tiempo maximo permitido para que un piloto realice una vuelta antes de que se suponga que el piloto ha tenido un accidente. Si se establece en 0, no se realizaran calculos automaticos de accidentes.",
+	"GID_RCnLDeslotTimeLabel": "Tiempo Accidente (seg)",
+
+	"GID_RCnLMultipleDeslotsHeader": "Permitir multiples accidentes",
+	"GID_RCnLMultipleDeslotsLess": "Permitir que un piloto tenga varios accidentes en una misma vuelta?",
+	"GID_RCnLYellowOnDeslotHeader": "Sacar la bandera amarilla",
+	"GID_RCnLYellowOnDeslotLess": "Quieres activar automaticamente una bandera amarilla cada vez que un piloto se accidente?",
+	
+	"GID_RCnLMaxDeslotsHeader": "Accidentes maximos",
+	"GID_RCnLMaxDeslotsLess": "Establece el numero maximo de veces que un piloti puede salirse de la pista antes de ser descalificado.",
+	"GID_RCnLMaxDeslotsLabel": "Numero Accidentes",
+
+	"GID_RCnLMaxDeslotsMoreWinTitle": "Informacion sobre el numero maximo de accidentes",
+	"GID_RCnLMaxDeslotsMoreHeader": "Accidentes maximos",
+	"GID_RCnLMaxDeslotsMore": "Una vez descalificado, al piloto no se le sumaran mas vueltas y esta sujeto a otras sanciones segun la configuracion. Establecer este valor en 0 permitira que un piloto se accidente sin ser descalificado",
+
+	"GID_RCnLHeatResetCrashHeader": "Resetear accidentes",
+	"GID_RCnLHeatResetCrashLess": "Quieres restablecer el recuento de accidentes de los pilotos al comienzo de cada manga?",
+
+	"GID_RCnLHeatResetDQHeader": "Resetear descalificados",
+	"GID_RCnLHeatResetDQLess": "Quieres restablecer el estado de descalificado de un piloto al comienzo de cada manga?",
+
+	"GID_RCnLLapPenaltyHeader": "Penalizacion de vuelta",
+	"GID_RCnLLapPenaltyLess": "Establece el numero de vueltas de penalizacion a un piloto cuando se accidenta. Esta sancion esta por encima y mas alla de cualquier retraso en la deteccion del accidente en si.",
+	"GID_RCnLLapPenaltyLabel": "Numero Vueltas",
+
+	"GID_RCnLTimePenaltyHeader": "Penalizacion de tiempo",
+	"GID_RCnLTimePenaltyLess": "Establece el tiempo de penalizacion a un piloro cuando cuando se accidenta. Esta sancion esta por encima y mas alla de cualquier retraso en la deteccion del accidente en si.",
+	"GID_RCnLTimePenaltyLabel": "Tiempo (segundos)",
+	"GID_RCnlTimePenaltyWinTitle": "Informacion sobre la penalizacion de tiempo",
+	"GID_RCnlTimePenaltyMoreHeader": "Penalizacion de tiempo",
+	"GID_RCnlTimePenaltyMore": "Si tienes reles por carril instalados, la energia del carril del piloto infractor se apagara durante este periodo de tiempo. De lo contrario, este tiempo se aplicara a la puntuacion de los pilotos, que dependiendo de la configuracion de la carrera puede o no ser significativa.",
+
+	"GID_RCnLDQHeatScorePCTHeader": "Penalizacion de puntos en la manga por descalificacion",
+	"GID_RCnLDQHeatScorePCTHeaderFont": "25",
+	"GID_RCnLDQHeatScorePCTLess": "Establezce el porcentaje de puntuacion de la manga de un piloto descalificado. Este valor solo afecta la posicion de la manga en si y no afecta directamente a la clasificacion general a menos que la posicion de la manga del piloto afecte a la clasificacion general como lo hace en una carrera por puntos. Establecer este valor al 100 % no penalizara al piloto por una descalificacion.",
+	"GID_RCnLDQHeatScorePCTLabel": "Porcentaje de puntuacion",
+
+	"GID_RCnLDQHeatOverallScorePCTHeader": "Penalizacion de puntos finales por descalificacion",
+	"GID_RCnLDQHeatOverallScorePCTHeaderFont": "25",
+	"GID_RCnLDQHeatOverallScorePCTLess": "Establece el porcentaje de puntos de un piloto en una manga para usar en la clasificacion general. Si se establece al 100 %, el piloto no sera penalizado directamente en la clasificacion general por una descalificacion.",
+	"GID_RCnLDQHeatOverallScorePCTLabel": "Porcentaje de puntos",
+
+	"GID_RAutoAdvanceDefaultsHeader": "Usar avance automatico/inicio de mangas",
+	"GID_RAutoAdvanceDefaultsHeaderFont": "25",
+	"GID_RAutoAdvanceDefaultsLess": "Quieres que al final de cada manga, la siguiente comience automaticamente despues de una cierta cantidad de tiempo? Si elige no, el Director de carrera tendra que avanzar manualmente a la siguiente manga y comenzar la manga cuando los pilotos esten preparados.",
+
+	"GID_RAutoAdvanceTimeHeader": "Lapso de tiempo para avance automatico",
+	"GID_RAutoAdvanceTimeLess": "Indica el tiempo para el que quieres definir una cuenta atras entre dos mangas. Si indicas 0 cancela el tiempo entre cada manga.
+
+***Nota: El Director de carrera puede detener el conteo entre dos mangas si hubiera algun problema.",
+	"GID_RAutoAdvanceTimeLabel": "Tiempo (en segundos)",
+
+	"GID_RAutoAdvanceTimeMoreWinTitle": "Informacion sobre el tiempo de avance automatico de las mangas",
+	"GID_RAutoAdvanceTimeMoreHeader": "Tiempo de avance automatico",
+	"GID_RAutoAdvanceTimeMoreHeaderFont": "25",
+	"GID_RAutoAdvanceTimeMore": "Despues de que finaliza una manga, Race Coordinator puede avanzar automaticamente a la manga siguiente, si la hay. El tiempo de avance automatico es la cantidad de tiempo de espera antes de pasar a la siguiente manga. Este periodo de tiempo les da tiempo a los pilotos y Director de carrera para revisar los datos de la manga que acaba de terminar.
+
+El Director de carrera puede detener el tiempo de avance automatico en cualquier momento antes de que finalice usando la opcion de pausa en el menu del Director de carrera en la pantalla del dia de la carrera.",
+
+	"GID_RAutoStartTimeHeader": "Tiempo de descanso entre mangas",
+	"GID_RAutoStartTimeHeaderFont": "25",
+	"GID_RAutoStartTimeLess": "Indica el tiempo de descanso que quieres definir antes del inicio de la manga siguiente. Si indicas 0 cancela el conteo.
+
+***Nota: El Director de carrera puede detener este tiempo de si hay algun problema.",
+	"GID_RAutoStartTimeLabel": "Tiempo (en segundos)",
+
+	"GID_RAutoStartTimeMoreWinTitle": "Informacion sobre el tiempo de descanso entre mangas",
+	"GID_RAutoStartTimeMoreHeader": "Tiempo de descanso entre mangas",
+	"GID_RAutoStartTimeMore": "Al iniciar una nueva manga, Race Coordinator puede iniciar automaticamente la siguiente manga. El tiempo de inicio automatico es la cantidad de tiempo de espera antes de comenzar. Este periodo de tiempo sirve a los pilotos y Directores de carrera para prepararse para la nueva manga.
+
+El Director de carrera puede parar el tiempo de inicio automatico en cualquier momento usando la opcion de pausa en el menu del Director de carrera en la pantalla del dia de la carrera.",
+
+	"GID_RCompleteHeader": "Configuracion completada"
+	"GID_RCompleteLess": "La configuracion de la carrera esta completa. Pulsa 'Guardar' para guardar estos ajustes de configuracion y salir. De lo contrario, puedes volver y cambiar cualquier configuracion o cancelar todo.
+
+Si desea realizar cambios en esta configuracion despues de guardarla, utiliza la configuracion del modo experto. Este modo tambien te permite copiar esta configuracion como plantilla para una nueva configuracion. Esta es la forma mas facil y rapida para crear carreras con RC, especialmente si esas carreras tienen una configuracion similar.",
+	"GID_RCompleteFailTitle": "Error al configurar la carrera",
+	"GID_RCompleteFailBody": "Ha ocurrido un error en a configuracion de la carrera. Envia el informe a contact@racecoordinator.net",
+
+	"GID_RAudioDefaultsHeader": "Uitilizar los sonidos por defecto",
+	"GID_RAudioDefaultsLess": "Quieres utilizar en la carrera los sonidos por defecto?",
+
+	"GID_RAudioStartPrefixHeader": "Conjunto de sonidos para el inicio de la manga",
+	"GID_RAudioStartPrefixHeaderFont": "25",
+	"GID_RAudioStartPrefixLess": "Elige el conjunto de sonidos para el inicio y avisos de la manga.",
+	"GID_RAudioStartPrefixLabel": "Sonidos",
+
+	"GID_RAudioYellowFlagHeader": "Advertencia de bandera amarilla",
+	"GID_RAudioYellowFlagLess": "Elige el archivo de sonido cuando durante la manga haya una pausa por una bandera amarilla.",
+	"GID_RAudioYellowFlagLabel": "Archivo de sonido",
+
+	"GID_RAudioHeatOverHeader": "Aviso de finalizacion de la manga",
+	"GID_RAudioHeatOverLess": "Elegir el arichivo de sonido para la finalizacion de la manga.",
+	"GID_RAudioHeatOverLabel": "Archivo de sonido",
+
+	"GID_RAudioRaceOverHeader": "Aviso de finalizacion de la carrera",
+	"GID_RAudioRaceOverLess": "Elegir el archivo de sonido para la finalizacion de la carrera.",
+	"GID_RAudioRaceOverLabel": "Archivo de sonido",
+
+	"GID_RUIDefaultsHeader": "Usar interfaz predeterminada?",
+	"GID_RUIDefaultsLess": "Utilizar la interfaz por defecto?",
+
+	"GID_RUIShowImagesHeader": "Mostrar las imagenes?",
+	"GID_RUIShowImagesLess": "Quieres ver las imagenes de pilotos y coches en la pantalla del Dia de Carrera?",
+	"GID_RUISortHeatsHeader": "Clasificacion en la pantalla Dia de Carrera",
+	"GID_RUISortHeatsLess": "Quieres que los pilotos se clasifiquen por posicion durante una manga en la pantalla del Dia de la Carrera?",
+
+	"GID_RUIRaceDayXamlHeader": "Archivo XAML Dia de la Carrera",
+	"GID_RUIRaceDayXamlLess": " Elegir el archivo XAML Dia de la Carrera para ver informacion durante las mangas de esta carrera.
+
+***Nota: Si el archivo elegido tiene un ' ' significa que esta utilizando una serie de archivos que corresponden a las diferentes preguntas que ya ha respondido y Race Coordinator elegira el archivo correcto de la serie. Si el archivo no esta en la serie o el archivo no contiene ' ', el archivo se usara exactamente como se define aqui.",
+	"GID_RUIRaceDayXamlLabel": "Archivo Xaml ",
+"GID_RUIRaceDayXamlMoreWinTitle": "Informacion sobre el archivo Xaml",
+	"GID_RUIRaceDayXamlMoreHeader": "Archivo Xaml",
+	"GID_RUIRaceDayXamlMore": "Race Coordinator admite opciones de configuracion para mostrar imagenes y clasificar los datos de carrera del piloto por las posiciones de carrera. Para ello, proporciona diferentes archivos XAML para cada posible opcion de configuracion elegida. Cada archivo proporcionado utiliza una convencion de nomenclatura para que Race Coordinator pueda encontrarlo.
+
+Si el archivo elegido tiene un '_', entonces se supone que esta utilizando archivos establecidos que corresponden a las diversas preguntas que ya ha respondido en la guia de configuracion y Race Coordinator elegira el archivo correcto del conjunto. Si no se puede encontrar el archivo correcto del conjunto, o si el archivo no contiene ningun '_', el archivo se usara exactamente como se selecciona aqui.
+
+***NOTA: Por lo general, los creadores de archivos XAML personalizados no se preocuparan por esta convencion de nomenclatura ni por las opciones de configuracion que proporciona Race Coordinator. En su lugar, el XAML personalizado simplemente se creara exactamente de la forma en que el creador quiere que se muestre. En este caso comun, el archivo XAML personalizado simplemente debe tener un nombre sin '_' en el nombre.",
+
+	"GID_RUIDefaultImagesHeader": "Usar imagenes predeterminadas para las carreras?",
+	"GID_RUIDefaultImagesHeaderFont": "25",
+	"GID_RUIDefaultImagesLess": "Quieres usar las imagenes predeterminadas para las carreras? Estas imagenes incluyen banderas, luces de inicio, combustible, etc.",
+
+	"GID_RUIRedStartFlagHeader": "Imagen previa a la salida",
+	"GID_RUIRedStartFlagLess": "Elige la imagen previa a la salida cuando aun no haya comenzado la cuenta atras",
+	"GID_RUIRedStartFlagLabel": "Imagen",
+
+	"GID_RUIYellowStartFlagHeader": "Imagen para la cuenta atras",
+	"GID_RUIYellowStartFlagLess": "Elige la imagen para la cuenta atras cuando comienza y termina",
+	"GID_RUIYellowStartFlagLabel": "Imagen",
+
+	"GID_RUIGreenStartFlagHeader": "imagen de salida",
+	"GID_RUIGreenStartFlagLess": "Elige la imagen de inicio/reinicio cuando la cuenta atras llegue a 0 y la manga comience/reanude.",
+	"GID_RUIGreenStartFlagLabel": "Imagen",
+
+	"GID_RUIDefaultStartHeader": "Usar la secuencia de inicio?",
+	"GID_RUIDefaultStartLess": " Quieres usar la secuencia de inicio/reinicio predeterminada?",
+	
+	"GID_RUIDefaultPerformanceImagesHeader": "Usar imagenes de rendimiento predeterminadas?",
+	"GID_RUIDefaultPerformanceImagesHeaderFont": "25",
+	"GID_RUIDefaultPerformanceImagesLess": "Quieres utilizar las imagenes de rendimiento predeterminadas? Estas imagenes solo se usan si eliges mostrar imsgenes o si tiense una interfaz de usuario personalizada para mostrarlas.",
+
+	"GID_RUISelfUpImageHeader": "Imagen de actuacion personal mejorando",
+	"GID_RUISelfUpImageLess": "Elige la imagen para indicar cuando el tiempo de una vuelta es mejor que el tiempo promedio del piloto.",
+	"GID_RUISelfUpImageLabel": "Imagen",
+
+	"GID_RUISelfDownImageHeader": "Imagen de actuacion personal peor",
+	"GID_RUISelfDownImageLess": "Elige la imagen para indicar cuando el tiempo de una vuelta esta por debajo del tiempo promedio del piloto.",
+	"GID_RUISelfDownImageLabel": "Imagen",
+
+	"GID_RUIHeatUpImageHeader": "Imagen para el lider de carrera mejorando",
+	"GID_RUIHeatUpImageLess": "Elige la imagen para indicar cuando el tiempo de vuelta del lider es mejor que su tiempo promedio.",
+	"GID_RUIHeatUpImageLabel": "Imagen",
+
+	"GID_RUIHeatDownImageHeader": "Imagen para el lider de carrera peor",
+	"GID_RUIHeatDownImageLess": "Elige la imagen para indicar cuando el tiempo de vuelta del lider esta por debajo de su tiempo promedio.",
+	"GID_RUIHeatDownImageLabel": "Imagen",
+
+	"GID_RUIRaceUpImageHeader": "Imagen para la vuelta rapida de carrera",
+	"GID_RUIRaceUpImageLess": "Elige la imagen para indicar cuando se realiza la vuelta rapida.",
+	"GID_RUIRaceUpImageLabel": "Imagen",
+
+	"GID_RUIRaceDownImageHeader": "Imagen para la vuelta peor que la vuelta rapida",
+	"GID_RUIRaceDownImageLess": "Elige la imagen para indicar cuando el tiempo de vuelta esta por debajo del promedio de la vuelta rapida.",
+	"GID_RUIRaceDownImageLabel": "Imagen",
+
+	"GID_RUIDefaultFlagImagesHeader": "Usar imagenes de banderas predeterminadas durante la carrera",
+	"GID_RUIDefaultFlagImagesHeaderFont": "25",
+	"GID_RUIDefaultFlagImagesLess": "Quieres usar las imagenes de banderas predeterminadas durante la carrera?",
+	"GID_RUIRedFlagImageHeader": "Bandera roja",
+	"GID_RUIRedFlagImageLess": "Elija la imagen para la bandera roja. La bandera roja aparece al final de la carrera y entre mangas.",
+	"GID_RUIRedFlagImageLabel": "Imagen bandera roja",
+
+	"GID_RUIYellowFlagImageHeader": "Bandera amarilla",
+	"GID_RUIYellowFlagImageLess": "Elige la imagen de la bandera amarilla. La bandera amarilla aparece despues de iniciarse la manga y/o al pausarse una manga por cualquier incidente de carrera.",
+	"GID_RUIYellowFlagImageLabel": "Imagen bandera amarilla",
+
+	"GID_RUIGreenFlagImageHeader": "Bandera verde",
+	"GID_RUIGreenFlagImageLess": "Elija la imagen para la bandera verde. La bandera verde aparece durante toda la carrera siempre que no haya pausas o paradas e indica que se estan contando las vueltas.",
+	"GID_RUIGreenFlagImageLabel": "Imagen bandera verde",
+
+	"GID_RUIWhiteFlagImageHeader": "Bandera blanca",
+	"GID_RUIWhiteFlagImageLess": "Elige la imagen de la bandera blanca. La bandera blanca aparece cuando finaliza la manga, pero los pilotos pueden completar una o mas vueltas antes de que finalice oficialmente la manga. En las carreras Nascar informa a los pilotos de la ultima vuelta",
+	"GID_RUIWhiteFlagImageLabel": "Imagen bandera blanca",
+
+	"GID_RUICheckeredFlagImageHeader": "Bandera a cuadros",
+	"GID_RUICheckeredFlagImageLess": "Elige la imagen de la bandera a cuadros. La bandera a cuadros aparece al final de carrera, una vez completadas todas las mangas. Indica que la carrera ha terminado y Race Coordinator procedera a guardar las estadisticas de la carrera.",
+	"GID_RUICheckeredFlagImageLabel": "Imagen bandera a cuadros",
+
+	"GID_RUIBlackFlagImageHeader": "Bandera negra",
+	"GID_RUIBlackFlagImageLess": "Elige la imagen para la bandera negra mostrada a un piloto. Se impone una bandera negra a un piloto por cualquier sancion, incluida una salida en falso o exceso de velocidad en boxes.",
+	"GID_RUIBlackFlagImageLabel": "Imagen bandera negra",
+
+	"GID_RUIBlackFlagIndicatorImageHeader": "Indicador de bandera negra",
+	"GID_RUIBlackFlagIndicatorImageLess": "Elige la serie de imagenes para indicar cuanto le queda de la penalizacin al piloto.",
+	"GID_RUIBlackFlagIndicatorImageLabel": "Set imagenes bandera negra",
+
+	"GID_RUIStartXamlHeader": "Archivo Xaml de inicio de la manga",
+	"GID_RUIStartXamlLess": "Elige el archivo Xaml para el inicio de la manga de esta carrera. Este archivo solo se utilizara al comienzo de cada manga.",
+	"GID_RUIStartXamlLabel": "Archivo Xaml ",
+
+	"GID_RUIStartDelayHeader": "Retraso en el inicio de la manga",
+	"GID_RUIStartDelayLess": "Indica el tiempo (en segundos) de espera antes de que aparezca la ventana de inicio de la manga. Esto puede ser util si el Director de carrera esta pilotando y tenga tiempo suficiente para ir de la pantalla de control a su posicion en el carril de la pista.",
+	"GID_RUIStartDelayLabel": "Retraso en segundos",
+
+	"GID_RUIStartRandomizerHeader": "Cuenta atras aleatoria",
+	"GID_RUIStartRandomizerLess": "Elige en segundos el tiempo aleatorio de inicio de la cuenta atras del semaforo. Si este valor es mayor que 0, el Go no ocurrira un segundo despues del '1' pero el Go ocurrira entre 1 segundo despues y 1 segundo mas el valor indicado. Esto sirve para evitar que los pilotos memorizen el tiempo de cuenta atras y deban tener pericia en el tiempo de reaccion al semaforo verde.",
+	"GID_RUIStartRandomizerLabel": "Tiempo en segundos",
+	
+	"GID_RUIRestartXamlHeader": "Archivo Xaml para reiniciar la manga",
+	"GID_RUIRestartXamlLess": "Elige el archivo Xaml para el reinicio de la manga. Este archivo se usara cada vez que haya que reiniciar la manga despues de una bandera amarilla.",
+	"GID_RUIRestartXamlLabel": "Archivo Xaml",
+
+	"GID_RUIRestartDelayHeader": "Retraso para reiniciar la manga",
+	"GID_RUIRestartDelayLess": "Elige el retraso en segundos para abrir la pantalla de reinicio de carrera. Esto puede ser util si el Director de carrera esta pilotando y tenga tiempo suficiente para ir de la pantalla de control a la pista.",
+	"GID_RUIRestartDelayLabel": "Retraso en segundos",
+		
+	"GID_RUIRestartRandomizerHeader": "Retraso reinicio",
+	"GID_RUIRestartRandomizerLess": "Elige en segundos el tiempo aleatorio de reinicio de la manga. Si este valor es mayor que 0, el Go no ocurrira un segundo despues del '1' pero el Go ocurrira entre 1 segundo despues y 1 segundo mas el valor indicado. Esto sirve para evitar que los pilotos memorizen el tiempo de cuenta atras y deban tener pericia en el tiempo de reaccion al semaforo verde.",
+	"GID_RUIRestartRandomizerLabel": "Tiempo en segundos",
+	
+	"GID_RSeasonUseHeader": "Configurar los puntos de la temporada",
+	"GID_RSeasonUseLess": "Quieres configurar esta carrera para que cuente para la temporada, en funcion de los resultados? En caso afirmativo, Race Coordinator contara los puntos solo si ha elegido la opcion Temporada antes de iniciar la carrera. De lo contrario, se otorgaran 0 puntos incluso si elige Temporada durante la carrera.",
+	
+	"GID_RSPointsRaceScoreListHeader": "Asignacion de puntos para la temporada segun la clasificacion de la carrera",
+	"GID_RSPointsRaceScoreListHeaderFont": "20",
+	"GID_RSPointsRaceScoreListLess": "Introduce el numero de puntos que quieres dar segun el rango del piloto durante la carrera. El primer numero de la lista se asignara al ganador, el segundo numero al segundo, etc. Si hay menos pilotos, todos los lugares no especificados recibiran 0 puntos.",
+	"GID_RSPointsRaceScoreListLabel": "Lista de puntos",
+
+	"GID_RSPointsCarryOverPctHeader": "Porcentaje de puntos de un piloto que se suman al total de puntos de la temporada",
+	"GID_RSPointsCarryOverPctHeaderFont": "20",
+	"GID_RSPointsCarryOverPctLess": "Elige el porcentaje de puntos de un piloto para sumar al total de puntos de la temporada. Esto se puede usar para recompensar el margen con el que se gana.
+
+Por ejemplo, si este valor es del 50 % y el ganador tiene 80 vueltas realizadas en la carrera, recibira 40 puntos adicionales a estos puntos de la temporada.",
+	"GID_RSPointsCarryOverPctLabel": "Pourcentage",
+
+	"GID_RSPointsHeatScoreListHeader": "Puntos de bonificacion de temporada por rango de mangas",
+	"GID_RSPointsHeatScoreListHeaderFont": "25",
+	"GID_RSPointsHeatScoreListLess": "Asigna los puntos que se otorgan en funcion de la clasificacion de cada piloto para cada manga del total de la temporada. El primer numero de la lista se asignara al ganador, el segundo numero al segundo, etc. Si hay menos pilotos, todos los lugares no especificados recibiran 0 puntos.",
+	"GID_RSPointsHeatScoreListLabel": "Lista de puntos",
+
+	"GID_RSPointsBonusHeatFastestLapHeader": "Puntos de bonificacion de temporada por la vuelta mas rapida de las mangas",
+	"GID_RSPointsBonusHeatFastestLapHeaderFont": "20",
+	"GID_RSPointsBonusHeatFastestLapLess": "Introduce el numero de puntos de bonificacion que se otorgaran al piloto con la vuelta mas rapida en cada manga.",
+	"GID_RSPointsBonusHeatFastestLapLabel": "Puntos",
+
+	"GID_RSPointsBonusFastestLapHeader": "Puntos de bonificacion de temporada por la vuelta mas rapida de la carrera",
+	"GID_RSPointsBonusFastestLapHeaderFont": "20",
+	"GID_RSPointsBonusFastestLapLess": "Introduce el numero de puntos de bonificacion que se otorgaran al piloto que tenga la vuelta mas rapida de la carrera.",
+	"GID_RSPointsBonusFastestLapLabel": "Puntos",
+
+	"GID_RSPointsOneLaneBonusPerHeader": "Una unica bonificacion de puntos de temporada por piloto",
+	"GID_RSPointsOneLaneBonusPerHeaderFont": "20",
+	"GID_RSPointsOneLaneBonusPerLess": "Quieres otorgar solo una bonificacion de carril por piloto, evitando asi que el mismo piloto obtenga todas las bonificaciones de carril? Si se selecciona, un piloto con bonificaciones de multiples carriles recibira la bonificacion mas alta, y la bonificacion adicional se otorgara al siguiente mejor piloto, y asi sucesivamente.",
+
+	"GID_RSPointsBonusFastestLaneLapHeader": "Bonificacion de temporada por la vuelta mas rapida por carril",
+	"GID_RSPointsBonusFastestLaneLapHeaderFont": "20", 
+	"GID_RSPointsBonusFastestLaneLapLess": "Asigna la cantidad de puntos de bonificacion que se otorgaran al piloto que tenga la vuelta mas rapida en cada carril",
+	"GID_RSPointsBonusFastestLaneLapLabel": "Puntos",		
+
+	"GID_RGroupUseHeader": "Utilizar el modo grupos",
+	"GID_RGroupUseLess": "Los grupos te permiten separar a los pilotos para que, independientemente de la configuracion de carrera que hayas elegido, los pilotos separados por grupos no compitan juntos en una manga. El uso de grupos tambien obliga a uno o mas pilotos a ser los primeros, independientemente de las puntuaciones actuales.
+
+Esta no es una configuracion habitual, pero quieres crear grupos?",
+	"GID_RGroupsMoreWinTitle": "Informacion sobre los grupos",
+	"GID_RGroupsMoreHeader": "Grupos",
+	"GID_RGroupsMore": "Los grupos te permiten separar a los pilotos entre si para que, sin importar que otras configuraciones de carrera hayas configurado, los pilotos en grupos separados no compitan cara a cara en una manga. El uso de grupos tambien te permite obligar a uno o mas pilotos de cada grupo a colocarse en la parte superior de la tabla de lideres, independientemente de las puntuaciones reales de los pilotos, lo que puede ser muy util para tipos especificos de carreras clasificatorias.
+
+Las asignaciones de grupos de pilotos se realizan estrictamente por las semillas de los pilotos y la cantidad de grupos creados por sus configuraciones.",
+
+"GID_RGroupMaxGroupsHeader": "Grupos maximo",
+	"GID_RGroupMaxGroupsLess": "Selecciona el numero maximo de grupos a utilizar. Una vez que se crea esta cantidad de grupos, los controladores simplemente se distribuiran entre los grupos en lugar de crear nuevos grupos.",
+	"GID_RGroupMaxGroupsLabel" "Maximo",
+	
+	"GID_RGroupMinAdvanceHeader": "Numero de avance",
+	"GID_RGroupMinAdvanceLess": "Selecciona el numero de pilotos de cada grupo para clasificar siempre en lo mas alto de la clasificacion general a pesar de su puntaje general real.",
+	"GID_RGroupMinAdvanceLabel": "Avance",
+	"GID_RGroupMinAdvanceMoreWinTitle": "Informacion sobre el numero de avance",
+	"GID_RGroupMinAdvanceMoreHeader": "Numero de avance",
+	"GID_RGroupMinAdvanceMore": "El numero de pilotos a avanzar es el numero de pilotos de cada grupo a los que obligar a llegar a lo mas alto de la clasificacion. Estos pilotos se ven obligados a llegar a la cima en forma de todos contra todos por grupo.
+
+Por ejemplo, si este valor se establece en 2 y hay 4 grupos en la carrera, los pilotos del primer y quinto lugar en la clasificacion general seran los dos mejores pilotos del grupo 1. Los pilotos del segundo y sexto lugar seran los dos primeros. del grupo 2, los pilotos del 3.° y 7.° lugar seran del grupo 3, y los del 4.° y 8.° lugar seran del grupo 4. Los pilotos restantes en la clasificacion general se elegiran de los pilotos restantes en funcion de sus puntajes, independientemente del grupo en el que se encuentran.
+
+La clasificacion general siempre muestra la clasificacion de esta manera, sin embargo, hay una tabla de lideres de grupo que solo muestra la clasificacion de un grupo en particular.",
+
+	"GID_RGroupBalanceHeader": "Equilibrar grupos",
+	"GID_RGroupBalanceLess": "Quieres equilibrar los pilotos dentro de los grupos?",
+	"GID_RGroupBalanceMoreWinTitle": "Informacion sobre grupos equilibrados",
+	"GID_RGroupBalanceMoreHeader": "Balance de grupos",
+	"GID_RGroupBalanceMore": "Race Coordinator puede asignar pilotos a grupos de dos maneras. Si elige equilibrar las estadisticas, el RC dividira los pilotos en los grupos utilizados. Si elige no equilibrar las estadisticas, los mejores pilotos se elegiran para completar el primer grupo, luego los siguientes mejores pilotos se elegiran para completar cada grupo restante.
+
+Por ejemplo, si su grupo maximo es 2, seleccionar grupo equilibrador hara que todas los pilotos pares esten en un grupo y todos los pilotos impares esten en el otro. Por otro lado, si no equilibra el grupo, los principales pilotos X se asignan al primer grupo, luego los siguientes controladores Y se asignan al segundo grupo.",
+
+
+	"GID_RGroupAllowEmptyLanesHeader": "Permitir carriles vacios?",
+	"GID_RGroupAllowEmptyLanesLess": "Quieres que las mangas contengan carriles vacios? Permitir carriles vacios significa que al crear grupos puede haber menos pilotos que carriles para un grupo y permite la misma cantidad de mangas para cada grupo. Si NO, entonces el numero de pilotos/grupo DEBE ser igual al numero de carriles; de lo contrario, los nuevos grupos (despues del bombardeo) no se crearan hasta que haya tantos pilotos como carriles.
+
+Permitir carriles vacios creara mas grupos con menos pilotos por grupo.",
+
+"GID_RGroupAllowEmptyLanesMoreWinTitle": "Informacion sobre los carriles vacios",
+	"GID_RGroupAllowEmptyLanesMoreHeader": "Permitir carriles vacios",
+	"GID_RGroupAllowEmptyLanesMore": "Permitir carriles vacios significa que al configurar los grupos, puede haber menos pilotos en el grupo que carriles en la pista, creando asi mangas con carriles vacios con manga mas para el grupo.
+
+Si no se permite, el numero de pilotos en cada grupo esta obligado a ser al menos el numero de carriles en la pista. No se crearan nuevos grupos hasta que haya suficientes pilotos en cada grupo para que no haya carriles vacios en una manga.
+
+Permitir carriles vacios tendra el efecto de crear mas grupos con menos pilotos en cada grupo. No permitir carriles vacios creara menos grupos con mas pilotos en cada grupo.",
+
+	"GID_RGroupForceMultipleHeader": "Forzar multiplos maximos?",
+	"GID_RGroupForceMultipleLess": "Quieres forzar que el numero de grupos sea un multiplo del numero maximo elegido? Esto es util si este grupo esta compitiendo y no es la carrera final y deseas que el mismo numero de pilotos de cada grupo avance a la proxima carrera.",
+
+"GID_RGroupForceMultipleMoreWinTitle": "Informacion sobre forzar multiplo maximos",
+	"GID_RGroupForceMultipleMoreHeader": "Forzar multiplos maximos",
+	"GID_RGroupForceMultipleMore": "Si se establece, la cantidad de grupos sera un multiplo de los grupos maximos. La cantidad real de grupos dependera de la cantidad de pilotos y de sus otras opciones de configuracion. Si no fuerza un multiplo del maximo, el conteo de su grupo estara entre 2 y el numero maximo establecido.
+
+Esta es una opcion muy util si esta carrera de grupo no es la carrera final de su campeonato y desea avanzar un numero par de pilotos de cada grupo a la siguiente carrera.",
+
+	"GID_RGroupRotateHeatsHeader": "Rotacion de grupos por cada manga?",
+	"GID_RGroupRotateHeatsLess": "Quieres rotar cada grupo por cada manga? Si NO, cada grupo completa todas estas mangas y luego el Race Coordinator llama al siguiente grupo.",
+
+	"WEVENT_Intro":"Vision general",
+	"WEVENT_IntroExpander":"Vision general",
+	"WEVENT_IntroTB1":"En Race Coordinator, un campeonato es una serie de carreras que se ejecutan en sucesion. El resultado de cada carrera genera la proxima carrera del campeonato hasta que se completa la carrera final y se determina un ganador general del campeonato. Algunas carreras (como el Entrenamiento) no afectan a la proxima carrera. Otros determinaran la siembra para la proxima carrera, mientras que otros determinaran tanto la siembra como cuantos pilotos pasaran realmente a la proxima carrera. Si bien ganar las carreras intermedias es importante para clasificar para la proxima carrera y calificar a un piloto para pasar a la siguiente carrera, el ganador de la ultima carrera del campeonato es el ganador general del campeonato.",
+	"WEVENT_IntroTB2":"La primera carrera del evento se clasificara segun el orden en que aparezcan los pilotos en la lista de Carreras de pilotos en la pantalla Configuracion del dia de la carrera. Todas las carreras subsiguientes se clasificaran a partir de la clasificacion de la carrera anterior. No pueden participar mas pilotos en una carrera para un campeonato que los especificados por la carrera en el campeonato. Si hay demasiados pilotos, el campo se reducira eliminando los resultados mas bajos de la carrera anterior. Esto es muy util para que los pilotos avancen de una carrera clasificatoria a una carrera final.",
+	"WEVENT_IntroTB3":"Este asistente te guiara para la configuracion de un campeonato. La tabla de contenido a la izquierda brinda acceso rapido a las diferentes propiedades de un campeonato, asi como codigos de colores que indican el estado de esas propiedades. Una propiedad roja indica que la propiedad contiene un valor no valido. En el caso de las propiedades de texto, es probable que esto se deba a que el campo debe ser unico o se deja vacio. Para valores numericos, el valor contiene caracteres no validos (como letras), el valor esta fuera del rango esperado o el valor es un decimal cuando se espera un valor entero. Una propiedad azul en la tabla de contenido indica la propiedad actual que se esta viendo y una propiedad amarilla indica una propiedad cuyo valor predeterminado ha cambiado. Si una propiedad esta en rojo, este asistente no permitira que se cree el campeonato.",
+
+}
+
+
