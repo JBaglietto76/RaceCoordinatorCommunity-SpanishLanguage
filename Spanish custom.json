@@ -120,34 +120,34 @@ El tiempo de Warmup de avance automatico, mas el tiempo de Warmup de inicio auto
 	"GID_RHeatUseCustomFilesMoreHeader": "Archivos de rotacion personalizados",
 	"GID_RHeatUseCustomFilesMore": "Los archivos de rotacion personalizados te permiten realizar practicamente cualquier rotacion que puedas imaginar. Sin embargo, debes crear los archivos de rotacion personalizados tu mismo. Si eliges usar archivos de rotacion personalizados, puedes usar el editor de rotacion para crear los archivos.",
 
-	"GID_RDefaultDynamicThrottleControlHeader": "Contrôles dynamiques des gaz",
+	"GID_RDefaultDynamicThrottleControlHeader": "ContrÃ´les dynamiques des gaz",
 	"GID_RDefaultDynamicThrottleControlLess": "Souhaitez-vous configurer des commandes dynamiques des gaz telles que l'usure des pneus, le KERS, etc.",
 
 	"GID_RTireWearUseHeader": "Activer l'usure des pneus",
 	"GID_RTireWearUseLess": "Voulez-vous activer l'usure des pneus?",
 
-	"GID_RTireWearResetHeader": "Réinitialiser l'usure",
-	"GID_RTireWearResetLess": "Voulez-vous réinitialiser l'usure des pneus entre les chaleurs?",
+	"GID_RTireWearResetHeader": "RÃ©initialiser l'usure",
+	"GID_RTireWearResetLess": "Voulez-vous rÃ©initialiser l'usure des pneus entre les chaleurs?",
 
 	"GID_RTireWearPctImageHeader": "Indicateur d'usure des pneus Images",
-	"GID_RTireWearPctImageLess": "Veuillez sélectionner le jeu d'images à utiliser pour indiquer l'usure des pneus de voiture. L'ensemble d'images doit avoir au moins trois images dans la série.",
-	"GID_RTireWearPctImageLabel": "Série d'images",
+	"GID_RTireWearPctImageLess": "Veuillez sÃ©lectionner le jeu d'images Ã  utiliser pour indiquer l'usure des pneus de voiture. L'ensemble d'images doit avoir au moins trois images dans la sÃ©rie.",
+	"GID_RTireWearPctImageLabel": "SÃ©rie d'images",
 
 	"GID_RTireWearRateHeader": "Taux d'usure des pneus",
-	"GID_RTireWearRateLess": "Veuillez sélectionner la vitesse à laquelle les pneus doivent s'user. Cette valeur est un pourcentage par seconde basé sur le conducteur à plein régime.",
+	"GID_RTireWearRateLess": "Veuillez sÃ©lectionner la vitesse Ã  laquelle les pneus doivent s'user. Cette valeur est un pourcentage par seconde basÃ© sur le conducteur Ã  plein rÃ©gime.",
 	"GID_RTireWearRateLabel": "% Par seconde",
 
-	"GID_RTireWearHeader": "Courbe de frein à l'usure des pneus",
-	"GID_RTireWearLess": "Pour plus de réalisme, le freinage d'une voiture peut être ajusté en fonction de l'usure des pneus de la voiture. Les deux valeurs ci-dessous contrôlent à quel niveau d'usure des pneus la voiture sera autorisée à avoir un freinage complet et à quel point réduire le freinage des voitures en fonction de l'usure des pneus. Le graphique montre comment différents niveaux d'usure des pneus affectent le freinage en fonction de ces paramètres.",
+	"GID_RTireWearHeader": "Courbe de frein Ã  l'usure des pneus",
+	"GID_RTireWearLess": "Pour plus de rÃ©alisme, le freinage d'une voiture peut Ãªtre ajustÃ© en fonction de l'usure des pneus de la voiture. Les deux valeurs ci-dessous contrÃ´lent Ã  quel niveau d'usure des pneus la voiture sera autorisÃ©e Ã  avoir un freinage complet et Ã  quel point rÃ©duire le freinage des voitures en fonction de l'usure des pneus. Le graphique montre comment diffÃ©rents niveaux d'usure des pneus affectent le freinage en fonction de ces paramÃ¨tres.",
 	"GID_RTireWearMaxLossLabel": "Max Pct de perte de frein",
 	"GID_RTireWearMaxPctLabel": "Usure des pneus% pour Max Freins",
 	"GID_RTireWearPlotHeader": "Usure des pneus contre les freins",
 	"GID_RTireWearPlotXAxis": "Usure des pneus (0 - 100%)",
-	"GID_RTireWearPlotYAxis": "Freins ajustés",
+	"GID_RTireWearPlotYAxis": "Freins ajustÃ©s",
 
-	"GID_RTireWearRecoveryTimeHeader": "Temps de récupération des pneus",
-	"GID_RTireWearRecoveryTimeLess": "Veuillez sélectionner la durée (en secondes) nécessaire pour changer les pneus et réinitialiser l'usure des pneus à 0%. Si un conducteur effectue un arrêt au stand pendant ce temps, l'usure des pneus sera réinitialisée.",
-	"GID_RTireWearRecoveryTimeLabel": "Temps de récupération (en secondes)",
+	"GID_RTireWearRecoveryTimeHeader": "Temps de rÃ©cupÃ©ration des pneus",
+	"GID_RTireWearRecoveryTimeLess": "Veuillez sÃ©lectionner la durÃ©e (en secondes) nÃ©cessaire pour changer les pneus et rÃ©initialiser l'usure des pneus Ã  0%. Si un conducteur effectue un arrÃªt au stand pendant ce temps, l'usure des pneus sera rÃ©initialisÃ©e.",
+	"GID_RTireWearRecoveryTimeLabel": "Temps de rÃ©cupÃ©ration (en secondes)",
 
     "GID_RCallbuttonDelayHeader": "Retraso del boton de llamada",
 	"GID_RCallbuttonDelayLess": "Ajustar el tiempo de retraso desde que presiona el boton de llamada hasta que se activa una bandera amarilla y la carrera se detiene.",
@@ -483,7 +483,7 @@ El tiempo de Warmup de avance automatico, mas el tiempo de Warmup de inicio auto
 	"GID_DBestHeatLapHeader": "Sonido de la mejor vuelta en la manga o serie",
 	"GID_DBestHeatLapLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando este piloto logre la mejor vuelta de esta manga o serie.",
 	"GID_DBestHeatLapLabel": "Sonido de la mejor vuelta en la manga o serie",
-	"GID_DAudioDefaultMiscHeader": "Utilizar « Por defecto el resto de sonidos",
+	"GID_DAudioDefaultMiscHeader": "Utilizar Â« Por defecto el resto de sonidos",
 	"GID_DAudioDefaultMiscLess": "Deseaa utilizar todos los demas sonidos predeterminados para los anuncios restantes? Incluyen los relacionados con la gestion del combustible y las penalizaciones/advertencias.",
 	"GID_DFalseStartHeader": "Sonido de salida en falso",
 	"GID_DFalseStartLess": "Haz doble clic en el cuadro de abajo para cambiar el sonido cuando este piloto realiza una salida en falso.",
@@ -524,27 +524,27 @@ El tiempo de Warmup de avance automatico, mas el tiempo de Warmup de inicio auto
 	"GID_DGhostTypeLabel": "Tipo",
 	"GID_DGhostTypeHuman": "Real",
 	"GID_DGhostTypeConstantSpeed": "Velocidad constante",
-	"GID_DGhostTypeRPathLLane": "Parcours enregistré (voie de gauche)",
-	"GID_DGhostTypeRPathRLane": "Parcours enregistré (voie de droite)",
+	"GID_DGhostTypeRPathLLane": "Parcours enregistrÃ© (voie de gauche)",
+	"GID_DGhostTypeRPathRLane": "Parcours enregistrÃ© (voie de droite)",
 	"GID_DGhostTypeSPathLLane": "Parcour intelligent (voie de gauche))",
 	"GID_DGhostTypeSPathRLane": "Parcour intelligent (voie de droite)",
 	"GID_DGhostRecordedFileHeader": "Enregistreur de pace car dynamique",
 	"GID_DGhostRecordedFileLess": "Double cliquer dans la case ci-dessous  pour choisir le fichier dynamique",
 	"GID_DGhostRecordedFileLabel": "Fichier",
 	"GID_DGhostCoastSpeedHeader": "Vitesse dynamique de la pace car",
-	"GID_DGhostCoastSpeedLess": "Choisir la vitesse dynamique de la pace car quand celle-ci perd la synchronisation avec le parcours programmé. Cette vitesse sera utilisée pour une courte période de temps après une sortie de piste ou dans certaines circonstances quand la pace carest à un endroit autre que celui programmé",
+	"GID_DGhostCoastSpeedLess": "Choisir la vitesse dynamique de la pace car quand celle-ci perd la synchronisation avec le parcours programmÃ©. Cette vitesse sera utilisÃ©e pour une courte pÃ©riode de temps aprÃ¨s une sortie de piste ou dans certaines circonstances quand la pace carest Ã  un endroit autre que celui programmÃ©",
 	"GID_DGhostCoastSpeedLabel": "Pourcentage de ralenti",
 	"GID_DGhostLinearSpeedHeader": "Vitesse constante de la pace car",
 	"GID_DGhostLinearSpeedLess": "Choisir la vitesse de la pace car.",
 	"GID_DGhostLinearSpeedLabel": "Pourcentage de ralenti",
 	"GID_DGhostLinearLaneChangingHeader": "Changement de voie de la pace car",
-	"GID_DGhostLinearLaneChangingLess": "Durant la manche la pace car va essayer de changer de voie et essayer de ne pas changer de voie.Le temps inscrit determinel la durée de la manche et le pourcentage de changement de voie determine le nombre de tentative de changement de voie.
+	"GID_DGhostLinearLaneChangingLess": "Durant la manche la pace car va essayer de changer de voie et essayer de ne pas changer de voie.Le temps inscrit determinel la durÃ©e de la manche et le pourcentage de changement de voie determine le nombre de tentative de changement de voie.
 
 Parexemple,en indiquant un temps de 5 et un pourcentage de 10, aura pour effet de tenir le bouton LC (Lane Change) pour 0,5 sec chaque 5 seconde.",
-	"GID_DGhostLinearLaneChangingLabel1": "Durée",
+	"GID_DGhostLinearLaneChangingLabel1": "DurÃ©e",
 	"GID_DGhostLinearLaneChangingLabel2": "Pourcentage de changement de voie",
-	"GID_DGhostLinearLapResetHeader": "Remise à zéro de la durée",
-	"GID_DGhostLinearLapResetLess": "Voulez-vous remettre à zéro la durée des changements de voie quand un tour est compté?",
+	"GID_DGhostLinearLapResetHeader": "Remise Ã  zÃ©ro de la durÃ©e",
+	"GID_DGhostLinearLapResetLess": "Voulez-vous remettre Ã  zÃ©ro la durÃ©e des changements de voie quand un tour est comptÃ©?",
 	"GID_DCompleteHeader": "Creacion de piltos completada",
 	"GID_DCompleteLess": "La creacion del pilto se ha completado. Pulsa guardado para confirmar la configuracion y salir de la guia. De lo contrario, puedes volver atras para hacer cualquier cambio.
 
@@ -901,32 +901,32 @@ Por ejemplo, si este valor se establece en 50 % y un piloto ha dado 30 vueltas e
 	"GID_RStartCurrentLess": "Quieres empezar cada manga en el mismo lugar del carril donde cada piloto se detuvo en la manga anterior?",
 
 	"GID_RAddGhostsHeader": "Agregar un Safety Car?",
-	"GID_RAddGhostsLess": "Voulez-vous ajouter des Pace car pour que toutes les voies soit occupées par une voiture?
+	"GID_RAddGhostsLess": "Voulez-vous ajouter des Pace car pour que toutes les voies soit occupÃ©es par une voiture?
 	
-***Note: Pour cette option vous devez créeer un/des pilotes de Pace car en utilisant une des options de créations de pilotes. Si vous ajouter des Pace car et changer d'avis, simplement ne pas mettre ces voitures sur la piste et lancer la manche.",
+***Note: Pour cette option vous devez crÃ©eer un/des pilotes de Pace car en utilisant une des options de crÃ©ations de pilotes. Si vous ajouter des Pace car et changer d'avis, simplement ne pas mettre ces voitures sur la piste et lancer la manche.",
 
 	"GID_RBlackFlagTypeHeader": "Type de drapeau noir",
-	"GID_RBlackFlagTypeLess": "Choisir sous drapeau noir, quel type de pénalité  vous voulez appliquer pour la course. Si vous choississez 'Aucun' aucune pénalité sera appliquée pour les faux-départs et vitesse excessive dans les puits",
+	"GID_RBlackFlagTypeLess": "Choisir sous drapeau noir, quel type de pÃ©nalitÃ©  vous voulez appliquer pour la course. Si vous choississez 'Aucun' aucune pÃ©nalitÃ© sera appliquÃ©e pour les faux-dÃ©parts et vitesse excessive dans les puits",
 	"GID_RBlackFlagTypeLabel" "Type",
 	"GID_RBlackFlagTypeDriveThrough": "Passage aux puits",
-	"GID_RBlackFlagTypeStopGo": "Passage aux puits Arret-départ",
-	"GID_RBlackFlagTypeTimed": "Pénalité de temps durant l'arrêt aux puits",
+	"GID_RBlackFlagTypeStopGo": "Passage aux puits Arret-dÃ©part",
+	"GID_RBlackFlagTypeTimed": "PÃ©nalitÃ© de temps durant l'arrÃªt aux puits",
 	"GID_RBlackFlagTypeNone": "Ninguna",
 
-	"GID_RTimedBFValueHeader": "Temps d'arrêt ",
-	"GID_RTimedBFValueLess": "Choisir le nombre de secondes durant lesquelles le pilote doit s'arréter aux puits, dû à une pénalité sous drapeau noir.",
+	"GID_RTimedBFValueHeader": "Temps d'arrÃªt ",
+	"GID_RTimedBFValueLess": "Choisir le nombre de secondes durant lesquelles le pilote doit s'arrÃ©ter aux puits, dÃ» Ã  une pÃ©nalitÃ© sous drapeau noir.",
 	"GID_RTimedBFValueLabel": "Temps (en secondes)",
 
 	"GID_RPitThrottlePctHeader": "Vitesse maximum dans les puits",
-	"GID_RPitThrottlePctLess": "Entrez le pourcentage maximum de vitesse permise en entrant aux puits avant d'infliger une pénalité sous drapeau noir. Si cette valeur est 100 il n'y aura pas de pénalité.",
+	"GID_RPitThrottlePctLess": "Entrez le pourcentage maximum de vitesse permise en entrant aux puits avant d'infliger une pÃ©nalitÃ© sous drapeau noir. Si cette valeur est 100 il n'y aura pas de pÃ©nalitÃ©.",
 	"GID_RPitThrottlePctLabel": " Pourcentage",
 
-	"GID_RFalseStartThrottlePctHeader": "Pourcentage permis lors d'un faux-départ",
-	"GID_RFalseStartThrottlePctLess": "Entrez le pourcentage maximum permis lors d'un faux-départ avant d'infliger une pénalité sous drapeau noir. Si cette valeur est 100 il n'y aura pas de pénalité.",
+	"GID_RFalseStartThrottlePctHeader": "Pourcentage permis lors d'un faux-dÃ©part",
+	"GID_RFalseStartThrottlePctLess": "Entrez le pourcentage maximum permis lors d'un faux-dÃ©part avant d'infliger une pÃ©nalitÃ© sous drapeau noir. Si cette valeur est 100 il n'y aura pas de pÃ©nalitÃ©.",
 	"GID_RFalseStartThrottlePctLabel": "Pourcentage",
 
-	"GID_RBlackFlagToleranceHeader": "Tolérance drapeau noir",
-	"GID_RBlackFlagToleranceLess": "Indiquez le nombre de tours qu'un pilote peut faire sous un drapeau noir avant d'être disqualifié de la manche.",
+	"GID_RBlackFlagToleranceHeader": "TolÃ©rance drapeau noir",
+	"GID_RBlackFlagToleranceLess": "Indiquez le nombre de tours qu'un pilote peut faire sous un drapeau noir avant d'Ãªtre disqualifiÃ© de la manche.",
 	"GID_RBlackFlagToleranceLabel": "Nombre de tours",
 
 	"GID_RFuelUseHeader": "Carrera con Combustible",
@@ -1285,7 +1285,7 @@ Las asignaciones de grupos de pilotos se realizan estrictamente por las semillas
 	"GID_RGroupMinAdvanceMoreHeader": "Numero de avance",
 	"GID_RGroupMinAdvanceMore": "El numero de pilotos a avanzar es el numero de pilotos de cada grupo a los que obligar a llegar a lo mas alto de la clasificacion. Estos pilotos se ven obligados a llegar a la cima en forma de todos contra todos por grupo.
 
-Por ejemplo, si este valor se establece en 2 y hay 4 grupos en la carrera, los pilotos del primer y quinto lugar en la clasificacion general seran los dos mejores pilotos del grupo 1. Los pilotos del segundo y sexto lugar seran los dos primeros. del grupo 2, los pilotos del 3.° y 7.° lugar seran del grupo 3, y los del 4.° y 8.° lugar seran del grupo 4. Los pilotos restantes en la clasificacion general se elegiran de los pilotos restantes en funcion de sus puntajes, independientemente del grupo en el que se encuentran.
+Por ejemplo, si este valor se establece en 2 y hay 4 grupos en la carrera, los pilotos del primer y quinto lugar en la clasificacion general seran los dos mejores pilotos del grupo 1. Los pilotos del segundo y sexto lugar seran los dos primeros. del grupo 2, los pilotos del 3.Â° y 7.Â° lugar seran del grupo 3, y los del 4.Â° y 8.Â° lugar seran del grupo 4. Los pilotos restantes en la clasificacion general se elegiran de los pilotos restantes en funcion de sus puntajes, independientemente del grupo en el que se encuentran.
 
 La clasificacion general siempre muestra la clasificacion de esta manera, sin embargo, hay una tabla de lideres de grupo que solo muestra la clasificacion de un grupo en particular.",
 
@@ -1330,5 +1330,6 @@ Esta es una opcion muy util si esta carrera de grupo no es la carrera final de s
 	"WEVENT_IntroTB3":"Este asistente te guiara para la configuracion de un campeonato. La tabla de contenido a la izquierda brinda acceso rapido a las diferentes propiedades de un campeonato, asi como codigos de colores que indican el estado de esas propiedades. Una propiedad roja indica que la propiedad contiene un valor no valido. En el caso de las propiedades de texto, es probable que esto se deba a que el campo debe ser unico o se deja vacio. Para valores numericos, el valor contiene caracteres no validos (como letras), el valor esta fuera del rango esperado o el valor es un decimal cuando se espera un valor entero. Una propiedad azul en la tabla de contenido indica la propiedad actual que se esta viendo y una propiedad amarilla indica una propiedad cuyo valor predeterminado ha cambiado. Si una propiedad esta en rojo, este asistente no permitira que se cree el campeonato.",
 
 }
+
 
 
